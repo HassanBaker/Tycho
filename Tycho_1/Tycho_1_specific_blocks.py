@@ -1,6 +1,5 @@
-from tools.config import FULL_TRAIN_DIR, TEST_DIR, log_dir, save_dir
-from tools.data_processing import image_data
 from tools.network_blocks import *
+
 
 def conv_layers(input_tensor):
     conv1 = conv_layer(input_tensor,
@@ -35,6 +34,7 @@ def conv_layers(input_tensor):
     flat_layer = tf.contrib.layers.flatten(conv4)
 
     return flat_layer
+
 
 def fully_connected_layers(input_tensor):
     dense1 = dense_layer(input_tensor,
