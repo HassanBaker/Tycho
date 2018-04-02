@@ -1,10 +1,11 @@
-from tqdm import tqdm
 from sys import argv
 
+from tqdm import tqdm
+
+from Tycho_1 import conv_layers, fully_connected_layers
 from tools.config import TEST_DIR
 from tools.data_processing import image_data
 from tools.network_blocks import *
-from Tycho_1.Tycho_1 import conv_layers, fully_connected_layers
 
 IMAGE_SIZE = 45
 CHANNELS = 3
