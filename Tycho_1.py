@@ -22,10 +22,10 @@ LEARNING_RATE = 0.0004
 
 TRAINING_DURATION = 10000
 RECORD_INTERVAL = 100
-TEST_INTERVAL = 10
+TEST_INTERVAL = 5000
 SAVE_INTERVAL = 100
 NAME = "tycho_1_TRAIN_"  # "tycho_1.2_TRAIN_" for Tycho 1.2
-AUGMENT = "SELECT_ONE"
+AUGMENT = "SELECT_ONE"   # Selects a random image from 16 augmentations, reduces overfitting
 
 
 NAME = NAME + "_" + \

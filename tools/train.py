@@ -3,6 +3,60 @@ from tools.config import log_dir, save_dir
 from tqdm import tqdm
 
 
+def produce_answers_csv(TEST_EPOCHS, TEST_DATA, BATCH_SIZE,
+                        session, input_layer, final_layer,
+                        NAME, train_iteration):
+    print("TESTING")
+    predictions = []
+    with tqdm(total=TEST_EPOCHS) as test_pbar:
+        for epoch in range(TEST_EPOCHS):
+            test_batch_xs, test_batch_ys = TEST_DATA.next_batch(BATCH_SIZE)
+
+            current_predictions = session.run(final_layer,
+                                              feed_dict={input_layer: test_batch_xs})
+            current_predictions = current_predictions.tolist()
+            test_batch_ys = test_batch_ys.tolist()
+            for e in range(len(current_predictions)):
+                current_predictions[e].insert(0, test_batch_ys[e])
+            predictions += current_predictions
+            test_pbar.update(1)
+
+    produce_solutions_csv(predictions, NAME, train_iteration)
+    print("FINISHED TESTING")
+
+
+# noinspection PyBroadException
+def load(saver, session, LOAD_DIR, train_iteration):
+    try:
+        saver.restore(session, LOAD_DIR + "_session")
+        try:
+            with open(LOAD_DIR + "train_iteration", "r") as _file:
+                train_it = int(_file.read())
+                print("Loaded from train_iteration " + str(train_iteration))
+                return train_it
+        except Exception:
+            print("Cannot read train_iteration")
+            return 0
+    except Exception:
+        print("Cannot read session")
+        return 0
+
+
+def save(saver, session, SAVE_DIR, train_iteration):
+    saver.save(session, SAVE_DIR + "_session")
+    with open(SAVE_DIR + "train_iteration", "w") as _file:
+        _file.write(str(train_iteration))
+
+
+def get_loss_for_batch(session, loss, summary, writer, train_iteration,
+                       batch_xs, batch_ys, input_layer, output_layer):
+    _loss, summ = session.run(
+        [loss, summary],
+        feed_dict={input_layer: batch_xs, output_layer: batch_ys})
+    writer.add_summary(summ, train_iteration)
+    return _loss
+
+
 def train(x, y_, final_layer, train_step, learning_rate_ph, LEARNING_RATE, loss, summary,
           NAME, TRAIN, TEST, BATCH_SIZE, TRAINING_DURATION, TEST_EPOCHS,
           RECORD_INTERVAL, TEST_INTERVAL, SAVE_INTERVAL, LOAD=False):
@@ -14,56 +68,10 @@ def train(x, y_, final_layer, train_step, learning_rate_ph, LEARNING_RATE, loss,
     saver = tf.train.Saver()
     SAVE_PATH = save_dir + NAME + "/"
 
-    def _get_loss_for_batch(batch_xs, batch_ys, writer):
-        _loss, summ = sess.run(
-            [loss, summary],
-            feed_dict={x: batch_xs, y_: batch_ys})
-        writer.add_summary(summ, train_iteration)
-        return _loss
-
-    def _save():
-        saver.save(sess, SAVE_PATH + "_session")
-        with open(SAVE_PATH + "train_iteration", "w") as _file:
-            _file.write(str(train_iteration))
-
-    def _produce_answers_csv():
-        print("TESTING")
-        predictions = []
-        with tqdm(total=TEST_EPOCHS) as test_pbar:
-            for epoch in range(TEST_EPOCHS):
-                test_batch_xs, test_batch_ys = TEST.next_batch(BATCH_SIZE)
-
-                current_predictions = sess.run(final_layer,
-                                               feed_dict={x: test_batch_xs})
-                current_predictions = current_predictions.tolist()
-                test_batch_ys = test_batch_ys.tolist()
-                for e in range(len(current_predictions)):
-                    current_predictions[e].insert(0, test_batch_ys[e])
-                predictions += current_predictions
-                test_pbar.update(1)
-
-        produce_solutions_csv(predictions, NAME, train_iteration)
-        print("FINISHED TESTING")
-
-    def _load():
-        try:
-            saver.restore(sess, SAVE_PATH + "_session")
-            try:
-                with open(SAVE_PATH + "train_iteration", "r") as _file:
-                    train_it = int(_file.read())
-                    print("Loaded from train_iteration " + str(train_iteration))
-                    return train_it
-            except Exception:
-                print("Cannot read train_iteration")
-                return 0
-        except Exception:
-            print("Cannot read session")
-            return 0
-
     i = 0
 
     if LOAD:
-        train_iteration = _load()
+        train_iteration = load(saver, sess, SAVE_PATH, train_iteration)
         print("train iteration is:", train_iteration)
         print("i is:", i)
         i = train_iteration
@@ -82,17 +90,32 @@ def train(x, y_, final_layer, train_step, learning_rate_ph, LEARNING_RATE, loss,
                          y_: train_batch_ys,
                          learning_rate_ph: LEARNING_RATE})
             if RECORD_INTERVAL != 0 and i % RECORD_INTERVAL == 0:
-                _get_loss_for_batch(train_batch_xs, train_batch_ys, train_writer)
+                get_loss_for_batch(sess, loss, summary, train_writer, train_iteration,
+                                   train_batch_xs, train_batch_ys, x, y_)
 
             if TEST_INTERVAL != 0 and i != 0 and i % TEST_INTERVAL == 0:
-                _produce_answers_csv()
+                produce_answers_csv(TEST_EPOCHS, TEST, BATCH_SIZE,
+                                    sess, x, final_layer,
+                                    NAME, train_iteration)
 
             train_iteration += 1
             i += 1
 
             if SAVE_INTERVAL != 0 and i != 0 and i % SAVE_INTERVAL == 0:
-                _save()
+                save(saver, sess, SAVE_PATH, train_iteration)
 
             pbar.update(1)
 
     print("\nCompleted - ", NAME)
+
+#
+# def predict(NAME):
+#
+#     sess = tf.Session()
+#     sess.run(tf.global_variables_initializer())
+#
+#     saver = tf.train.Saver()
+#     SAVE_PATH = save_dir + NAME + "/"
+#
+#     train_iteration = load(saver, sess, SAVE_PATH, train_iteration)
+
