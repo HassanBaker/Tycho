@@ -2,10 +2,6 @@ from tools.model_analyzer import model_analyzer
 
 from tools.network_blocks import *
 
-
-
-
-
 def run_experiments():
     global train_step
     IMAGE_SIZE = 45
@@ -61,7 +57,7 @@ def run_experiments():
 
     def fully_connected_layers(input_tensor, activation_function="relu"):
         dense1 = dense_layer(input_tensor,
-                             weight_shape=[512*NUM_AUGMENTS, 2048],
+                             weight_shape=[512 * NUM_AUGMENTS, 2048],
                              bias_shape=[2048],
                              stddev=0.01,
                              activation=activation_function,
@@ -86,11 +82,12 @@ def run_experiments():
         for activation_function_final in ACTIVATION_FUNCTIONS_FINAL:
             tf.reset_default_graph()
 
-            x = tf.placeholder(tf.float32, shape=[BATCH_SIZE*NUM_AUGMENTS, IMAGE_SIZE, IMAGE_SIZE, CHANNELS], name="input")
+            x = tf.placeholder(tf.float32, shape=[BATCH_SIZE * NUM_AUGMENTS, IMAGE_SIZE, IMAGE_SIZE, CHANNELS],
+                               name="input")
 
             conv = conv_layers(x)
 
-            conv = tf.reshape(conv, shape=[-1, 512*NUM_AUGMENTS])
+            conv = tf.reshape(conv, shape=[-1, 512 * NUM_AUGMENTS])
 
             if activation_function_dense == "relu":
                 fully_connected = fully_connected_layers(conv, activation_function=activation_function_dense)
