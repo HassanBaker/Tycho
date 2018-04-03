@@ -7,7 +7,6 @@ from tools.config import labels
 def _normalise_on_question(question_matrix):
     epsilon = 1e-12
     question_matrix = question_matrix / (question_matrix.sum(1, keepdims=True) + epsilon)
-    # question_matrix[question_matrix < epsilon] = 0.0
     return question_matrix
 
 
@@ -67,7 +66,6 @@ def normalize_solution(np_matrix):
     output = np.concatenate((
         wq1, wq2, wq3, wq4, wq5, wq6, wq7, wq8, wq9, wq10, wq11),
         axis=1)
-    # output[output < 1e-4] = 0.0
     return output
 
 

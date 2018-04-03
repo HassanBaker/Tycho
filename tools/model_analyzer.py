@@ -1,15 +1,23 @@
 import tensorflow as tf
 from tqdm import tqdm
 
-from tools.config import TRAIN_DIR, VALIDATION_DIR, TEST_DIR, log_dir, save_dir
+from tools.config import TRAIN_DIR, VALIDATION_DIR, log_dir, save_dir
 from tools.data_processing import image_data
+
+"""
+A class used to quickly analyze.
+Used for experiments to compare and validate models.
+
+Trains a network for a set duration and gets validation loss and error along the way.
+
+Do not use for training! Use model_methods.train() instead 
+"""
 
 
 class model_analyzer:
     def __init__(self, summary,
                  TRAIN=TRAIN_DIR,
                  VAL=VALIDATION_DIR,
-                 TEST=TEST_DIR,
                  name="temp",
                  augment=True,
                  load_on_start=True):
@@ -24,9 +32,6 @@ class model_analyzer:
 
         self.VAL = image_data(VAL, augment=augment)
         self.VAL.shuffle()
-
-        self.TEST = image_data(TEST, augment=augment)
-        self.TEST.shuffle()
 
         self.train_iteration = 0
 
