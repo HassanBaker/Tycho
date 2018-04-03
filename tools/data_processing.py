@@ -18,9 +18,9 @@ Dependencies:
     tools.config
 """
 
+
 # noinspection PyMethodMayBeStatic,SpellCheckingInspection
 class image_augmenter:
-
     """
     A class used to agument images.
     Contains methods for cropping, rotating, downscaling, and alligning.
@@ -31,6 +31,7 @@ class image_augmenter:
         reduce()    -> a single image, that equates to the image at index 0, which augment() returns
 
     """
+
     def crop_image(self, image, cropped_size=208):
 
         image_size = np.shape(image)[0]
@@ -119,7 +120,6 @@ class image_augmenter:
 
 
 class image_data:
-
     """
     A class used to load and process image data.
 
@@ -134,6 +134,7 @@ class image_data:
                         runs augment() in image_augmenter, and selects a random image from the 16 returned
 
     """
+
     def __init__(self, dir_name, type="TRAIN", augment="REDUCE"):
         self.directory = root_dir + dir_name
         self.file_names = [f for f in listdir(self.directory) if isfile(join(self.directory, f))]
@@ -143,11 +144,11 @@ class image_data:
         self._augmenter = image_augmenter()
         self._cursor = 0
         self._augment = augment
-        print(dir_name, "read", "- Init Complete")
+        # print(dir_name, "read", "- Init Complete")
 
     def shuffle(self):
         random.shuffle(self.file_names)
-        print("Shuffle - Complete\n")
+        # print("Shuffle - Complete\n")
 
     def get_image_labels(self, file_name):
         labels = self.labels_df[self.labels_df["GalaxyID"] == int(file_name[:-4])]
@@ -157,6 +158,10 @@ class image_data:
         labels = np.array(labels.get_values()).reshape(labels.shape[1])
 
         return labels
+
+    def reset(self):
+        random.shuffle(self.file_names)
+        self._cursor = 0
 
     def next_batch(self, batch_size):
         labels_list = []
@@ -194,4 +199,3 @@ class image_data:
 
     def _load_image(self, filename):
         return io.imread(join(self.directory, filename)) / 255
-

@@ -16,6 +16,7 @@ def produce_answers_csv(TEST_EPOCHS, TEST_DATA, BATCH_SIZE,
                         session, input_layer, final_layer,
                         NAME, train_iteration):
     print("TESTING")
+    TEST_DATA.reset()
     predictions = []
     with tqdm(total=TEST_EPOCHS) as test_pbar:
         for epoch in range(TEST_EPOCHS):
