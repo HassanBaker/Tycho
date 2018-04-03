@@ -1,7 +1,7 @@
 from tools.data_processing import image_data
-from Tycho_1_specific_blocks import *
 from tools.config import FULL_TRAIN_DIR, TEST_DIR
-from tools.train import train
+from tools.model_methods import train
+from tools.network_blocks import *
 
 """
 Contains the Tycho1 architecture
@@ -49,7 +49,7 @@ x = tf.placeholder(tf.float32, shape=[BATCH_SIZE, IMAGE_SIZE, IMAGE_SIZE, CHANNE
 
 conv = conv_layers(x)
 
-fully_connected = fully_connected_layers(conv)
+fully_connected = tycho_1_fully_connected_layers(conv)
 
 final_layer = dense_layer(fully_connected,
                                weight_shape=[64, NUM_LABELS],

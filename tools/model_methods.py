@@ -1,6 +1,15 @@
 from tools.network_blocks import *
-from tools.config import log_dir, save_dir
+from tools.config import log_dir, save_dir, solutions_dir, labels
 from tqdm import tqdm
+import pandas as pd
+
+
+def produce_solutions_csv(predictions_list, NAME, train_iteration):
+    solution_path = solutions_dir + NAME + "_" + str(train_iteration) + ".csv"
+    prediction_df = pd.DataFrame(predictions_list)
+    # prediction_df.drop_duplicates(labels[0])
+    prediction_df.to_csv(solution_path, header=labels, index=False)
+    print("SOLUTION: ", solution_path)
 
 
 def produce_answers_csv(TEST_EPOCHS, TEST_DATA, BATCH_SIZE,
@@ -108,14 +117,4 @@ def train(x, y_, final_layer, train_step, learning_rate_ph, LEARNING_RATE, loss,
 
     print("\nCompleted - ", NAME)
 
-#
-# def predict(NAME):
-#
-#     sess = tf.Session()
-#     sess.run(tf.global_variables_initializer())
-#
-#     saver = tf.train.Saver()
-#     SAVE_PATH = save_dir + NAME + "/"
-#
-#     train_iteration = load(saver, sess, SAVE_PATH, train_iteration)
 

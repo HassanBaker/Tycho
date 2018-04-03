@@ -1,6 +1,6 @@
 from tools.model_analyzer import model_analyzer
 
-from Tycho_1_specific_blocks import *
+from tools.network_blocks import *
 
 """
 An experiment to analyse various final layer activation functions, with different learning optimisation algorithms,
@@ -30,7 +30,7 @@ def create_experimental_network(final_layer_activation_function, optimizer, lear
 
     conv = conv_layers(x)
 
-    fully_connected = fully_connected_layers(conv)
+    fully_connected = tycho_1_fully_connected_layers(conv)
 
     activation_layer = dense_layer(fully_connected,
                                    weight_shape=[64, NUM_LABELS],
@@ -47,9 +47,9 @@ def create_experimental_network(final_layer_activation_function, optimizer, lear
 
     train_step = None
     if optimizer == "SGD":
-        train_step = SGD(learning_rate, loss)
+        train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
     elif optimizer == "NESTEROV":
-        train_step = Nesterov(learning_rate, loss)
+        train_step = tf.train.MomentumOptimizer(learning_rate, 0.9, use_nesterov=True).minimize(loss)
     elif optimizer == "ADAM":
         with tf.name_scope("Adam"):
             train_step = tf.train.AdamOptimizer(learning_rate=learning_rate,
