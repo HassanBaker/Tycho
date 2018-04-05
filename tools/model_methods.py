@@ -36,19 +36,18 @@ def produce_answers_csv(TEST_EPOCHS, TEST_DATA, BATCH_SIZE,
 
 
 # noinspection PyBroadException
-def load(saver, session, LOAD_DIR, train_iteration):
+def load(saver, session, LOAD_DIR):
     try:
         saver.restore(session, LOAD_DIR + "_session")
-        try:
-            with open(LOAD_DIR + "train_iteration", "r") as _file:
-                train_it = int(_file.read())
-                print("Loaded from train_iteration " + str(train_iteration))
-                return train_it
-        except Exception:
-            print("Cannot read train_iteration")
-            return 0
     except Exception:
         print("Cannot read session")
+
+    try:
+        with open(LOAD_DIR + "train_iteration", "r") as _file:
+            train_it = int(_file.read())
+            return train_it
+    except Exception:
+        print("Cannot read train_iteration")
         return 0
 
 
@@ -81,7 +80,7 @@ def train(x, y_, final_layer, train_step, learning_rate_ph, LEARNING_RATE, loss,
     i = 0
 
     if LOAD:
-        train_iteration = load(saver, sess, SAVE_PATH, train_iteration)
+        train_iteration = load(saver, sess, SAVE_PATH)
         print("train iteration is:", train_iteration)
         print("i is:", i)
         i = train_iteration
@@ -117,5 +116,3 @@ def train(x, y_, final_layer, train_step, learning_rate_ph, LEARNING_RATE, loss,
             pbar.update(1)
 
     print("\nCompleted - ", NAME)
-
-

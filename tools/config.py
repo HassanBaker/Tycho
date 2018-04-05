@@ -55,4 +55,3 @@ labels = ["GalaxyID",
           "Class11.5",
           "Class11.6"
           ]
-

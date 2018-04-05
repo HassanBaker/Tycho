@@ -25,8 +25,7 @@ RECORD_INTERVAL = 100
 TEST_INTERVAL = 5000
 SAVE_INTERVAL = 100
 NAME = "tycho_1_TRAIN_"  # "tycho_1.2_TRAIN_" for Tycho 1.2
-AUGMENT = "SELECT_ONE"   # Selects a random image from 16 augmentations, reduces overfitting
-
+AUGMENT = "SELECT_ONE"  # Selects a random image from 16 augmentations, reduces overfitting
 
 NAME = NAME + "_" + \
        AUGMENT + "_" + \
@@ -52,11 +51,11 @@ conv = conv_layers(x)
 fully_connected = tycho_1_fully_connected_layers(conv)
 
 final_layer = dense_layer(fully_connected,
-                               weight_shape=[64, NUM_LABELS],
-                               bias_shape=[NUM_LABELS],
-                               stddev=0.001,
-                               activation=ACTIVATION_FUNCTION,
-                               name="activation_layer")
+                          weight_shape=[64, NUM_LABELS],
+                          bias_shape=[NUM_LABELS],
+                          stddev=0.001,
+                          activation=ACTIVATION_FUNCTION,
+                          name="activation_layer")
 
 y_ = tf.placeholder(tf.float32, shape=[BATCH_SIZE, NUM_LABELS], name="labels")
 

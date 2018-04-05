@@ -62,7 +62,8 @@ Supports relu, sigmoid, and softmax activation.
 """
 
 
-def dense_layer(input_tensor, weight_shape, bias_shape, stddev=0.01, activation="relu", name="dense"):
+def dense_layer(input_tensor, weight_shape, bias_shape, dropout_prob=0.0,
+                stddev=0.01, activation="relu", name="dense"):
     with tf.name_scope(name):
         w = weights(weight_shape, stddev=stddev)
         b = biases(bias_shape)
@@ -72,6 +73,8 @@ def dense_layer(input_tensor, weight_shape, bias_shape, stddev=0.01, activation=
             y = tf.nn.softmax(tf.matmul(input_tensor, w) + b)
         elif activation == "sigmoid":
             y = tf.nn.sigmoid(tf.matmul(input_tensor, w) + b)
+        if dropout_prob != 0:
+            y = tf.nn.dropout(y, dropout_prob, name="dropout")
         tf.summary.histogram("weights", w)
         tf.summary.histogram("biases", b)
         tf.summary.histogram("activations", y)
@@ -158,11 +161,12 @@ Creates the fully connected layers (except the last layer) for Tycho 2.2
 """
 
 
-def tycho_2_fully_connected_layers(input_tensor, activation_function="relu"):
+def tycho_2_fully_connected_layers(input_tensor, activation_function="relu", dropout_prob=0.0):
     dense1 = dense_layer(input_tensor,
                          weight_shape=[512 * 16, 2048],
                          bias_shape=[2048],
                          stddev=0.01,
+                         dropout_prob=dropout_prob,
                          activation=activation_function,
                          name="dense1")
 
@@ -170,6 +174,7 @@ def tycho_2_fully_connected_layers(input_tensor, activation_function="relu"):
                          weight_shape=[2048, 1024],
                          bias_shape=[1024],
                          stddev=0.01,
+                         dropout_prob=dropout_prob,
                          activation=activation_function,
                          name="dense2")
 
@@ -182,7 +187,87 @@ As described by Sander Dieleman in http://benanne.github.io/2014/04/05/galaxy-zo
 """
 
 
-def maxout_layers(input_tensor):
+def maxout_layers(input_tensor, dropout_prob=0.0):
     maxout_1 = maxout_layer(input_tensor, 2048)
+    if dropout_prob != 0:
+        maxout_1 = tf.nn.dropout(maxout_1, dropout_prob, name="dropout")
     maxout_2 = maxout_layer(maxout_1, 1024)
+    if dropout_prob != 0:
+        maxout_2 = tf.nn.dropout(maxout_2, dropout_prob, name="dropout")
     return maxout_2
+
+
+"""
+conv_layer_exp_1 & conv_layer_exp_2
+2 of the convolutional layer architectures used in the Tycho 1 conv layer experiments
+"""
+
+
+def conv_layer_exp_1(input_tensor):
+    conv1 = conv_layer(input_tensor,
+                       num_channels=3,
+                       output_size=32,
+                       filter_size=6,
+                       pooling=2,
+                       name="conv1")
+
+    conv2 = conv_layer(conv1,
+                       num_channels=32,
+                       output_size=64,
+                       filter_size=5,
+                       pooling=2,
+                       name="conv2")
+
+    conv3 = conv_layer(conv2,
+                       num_channels=64,
+                       output_size=128,
+                       filter_size=5,
+                       pooling=2,
+                       name="conv3")
+
+    flat_layer = tf.contrib.layers.flatten(conv3)
+
+    return flat_layer
+
+
+def conv_layer_exp_2(input_tensor):
+    conv1 = conv_layer(input_tensor,
+                       num_channels=3,
+                       output_size=32,
+                       filter_size=6,
+                       pooling=2,
+                       name="conv1")
+
+    conv2 = conv_layer(conv1,
+                       num_channels=32,
+                       output_size=64,
+                       filter_size=5,
+                       pooling=2,
+                       name="conv2")
+
+    conv3 = conv_layer(conv2,
+                       num_channels=64,
+                       output_size=128,
+                       filter_size=3,
+                       pooling=None,
+                       name="conv3")
+
+    conv4 = conv_layer(conv3,
+                       num_channels=128,
+                       output_size=256,
+                       filter_size=3,
+                       pooling=None,
+                       name="conv4"
+                       )
+
+    conv5 = conv_layer(conv4,
+                       num_channels=256,
+                       output_size=512,
+                       filter_size=3,
+                       pooling=2,
+                       name="conv4"
+                       )
+
+    flat_layer = tf.contrib.layers.flatten(conv5)
+
+    return flat_layer

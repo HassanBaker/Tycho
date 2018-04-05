@@ -12,6 +12,7 @@ ACTIVATION_FUNCTIONS_DENSE = ["relu", "maxout"]
 ACTIVATION_FUNCTIONS_FINAL = ["relu", "sigmoid"]
 LEARNING_OPTIMIZER = "ADAM"
 LEARNING_RATE = 0.0004
+DROPOUT = [0, 0.5]
 
 TRAINING_EPOCHS = 2000
 RECORD_INTERVAL = 100
@@ -20,7 +21,7 @@ NAME = "tycho_1_experiments"
 AUGMENT = "CONCAT"
 
 
-def create_experimental_network(activation_function_dense, activation_function_final):
+def create_experimental_network(activation_function_dense, activation_function_final, dropout_prob=0):
     tf.reset_default_graph()
 
     x = tf.placeholder(tf.float32, shape=[BATCH_SIZE * NUM_AUGMENTS, IMAGE_SIZE, IMAGE_SIZE, CHANNELS],
@@ -32,9 +33,9 @@ def create_experimental_network(activation_function_dense, activation_function_f
 
     fully_connected = None
     if activation_function_dense == "relu":
-        fully_connected = tycho_2_fully_connected_layers(reshaped_conv_ouput)
+        fully_connected = tycho_2_fully_connected_layers(reshaped_conv_ouput, dropout_prob=dropout_prob)
     elif activation_function_dense == "maxout":
-        fully_connected = maxout_layers(reshaped_conv_ouput)
+        fully_connected = maxout_layers(reshaped_conv_ouput, dropout_prob=dropout_prob)
 
     activation_layer = dense_layer(fully_connected,
                                    weight_shape=[1024, NUM_LABELS],
@@ -69,33 +70,36 @@ def run_experiments():
     for activation_function_dense in ACTIVATION_FUNCTIONS_DENSE:
 
         for activation_function_final in ACTIVATION_FUNCTIONS_FINAL:
-            summary, train_step, loss, x, y_ = create_experimental_network(activation_function_dense,
-                                                                           activation_function_final)
 
-            _NAME = NAME + "_" + \
-                    LEARNING_OPTIMIZER + "_" + \
-                    str(LEARNING_RATE) + "_" + \
-                    activation_function_dense + "_" + \
-                    activation_function_final
+            for dropout_prob in DROPOUT:
+                summary, train_step, loss, x, y_ = create_experimental_network(activation_function_dense,
+                                                                               activation_function_final,
+                                                                               dropout_prob=dropout_prob)
 
-            analyzer = model_analyzer(
-                summary,
-                name=_NAME,
-                augment=AUGMENT
-            )
+                _NAME = NAME + "_" + \
+                        LEARNING_OPTIMIZER + "_" + \
+                        str(LEARNING_RATE) + "_" + \
+                        activation_function_dense + "_" + \
+                        activation_function_final
 
-            analyzer.train(
-                train_step,
-                loss,
-                x,
-                y_,
-                TRAINING_EPOCHS,
-                BATCH_SIZE,
-                RECORD_INTERVAL,
-                save_interval=SAVE_INTERVAL
-            )
+                analyzer = model_analyzer(
+                    summary,
+                    name=_NAME,
+                    augment=AUGMENT
+                )
 
-            print("\nCompleted - ", _NAME)
+                analyzer.train(
+                    train_step,
+                    loss,
+                    x,
+                    y_,
+                    TRAINING_EPOCHS,
+                    BATCH_SIZE,
+                    RECORD_INTERVAL,
+                    save_interval=SAVE_INTERVAL
+                )
+
+                print("\nCompleted - ", _NAME)
 
 
 if __name__ == "__main__":

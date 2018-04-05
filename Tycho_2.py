@@ -14,12 +14,13 @@ ACTIVATION_FUNCTION_DENSE = "maxout"
 ACTIVATION_FUNCTION_FINAL = "relu"
 LEARNING_OPTIMIZER = "ADAM"
 LEARNING_RATE = 0.0004
+DROPOUT = 0.5
 
 TRAINING_DURATION = 10000
 RECORD_INTERVAL = 100
 TEST_INTERVAL = 5000
 SAVE_INTERVAL = 100
-NAME = "tycho_2.1_TRAIN"
+NAME = "tycho_2_TRAIN"
 AUGMENT = "CONCAT"
 
 NAME = NAME + "_" + \
@@ -27,7 +28,8 @@ NAME = NAME + "_" + \
        LEARNING_OPTIMIZER + "_" + \
        str(LEARNING_RATE) + "_" + \
        ACTIVATION_FUNCTION_DENSE + "_" + \
-       ACTIVATION_FUNCTION_FINAL
+       ACTIVATION_FUNCTION_FINAL + "_" + \
+       str(DROPOUT)
 
 TRAIN = image_data(FULL_TRAIN_DIR, augment=AUGMENT)
 TRAIN.shuffle()
@@ -44,9 +46,13 @@ conv = conv_layers(x)
 
 reshaped_conv_ouput = tf.reshape(conv, shape=[-1, 512 * NUM_AUGMENTS])
 
-maxout = maxout_layers(reshaped_conv_ouput)
+dense = None
+if ACTIVATION_FUNCTION_DENSE == "maxout":
+    dense = maxout_layers(reshaped_conv_ouput, dropout_prob=DROPOUT)
+elif ACTIVATION_FUNCTION_DENSE == "relu":
+    dense = tycho_2_fully_connected_layers(reshaped_conv_ouput, dropout_prob=DROPOUT)
 
-final_layer = dense_layer(maxout,
+final_layer = dense_layer(dense,
                           weight_shape=[1024, NUM_LABELS],
                           bias_shape=[NUM_LABELS],
                           stddev=0.001,
