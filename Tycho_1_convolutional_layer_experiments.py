@@ -72,7 +72,7 @@ def run_experiments():
         summary, train_step, loss, x, y_ = create_experimental_network(number_of_conv_layers)
 
         _NAME = NAME + "_" + \
-                str(NUMBER_OF_CONV_LAYERS) + "_" + \
+                str(number_of_conv_layers) + "_" + \
                 LEARNING_OPTIMIZER + "_" + \
                 str(LEARNING_RATE) + "_" + \
                 FINAL_LAYER_ACTIVATION
