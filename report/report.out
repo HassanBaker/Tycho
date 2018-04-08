@@ -1,0 +1,44 @@
+\BOOKMARK [0][-]{section*.1}{List of Figures}{}% 1
+\BOOKMARK [0][-]{section*.1}{abstract}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Galaxy Zoo}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{The Galaxy Challenge}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Convolutional Neural Networks}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Analysis}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Goals}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Tools}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{The Data}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{Cropping}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{Down-scaling}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{Data Augmentation}{section.2.3}% 13
+\BOOKMARK [0][-]{chapter.3}{The Network: Tycho1}{}% 14
+\BOOKMARK [1][-]{section.3.1}{The Architecture}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Missing Component}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Data Pre-processing}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Deep Learning Optimizer Algorithms \046 Hyper-Parameter Search}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Study Description}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Results}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.2.1}{Stochastic Gradient Descent}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.2}{Stochastic Gradient Descent With Nesterov Momentum}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.3}{Adam}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.4}{Further Learning Rate Tests On The Adam Algorithm}{section.4.2}% 24
+\BOOKMARK [1][-]{section.4.3}{Conclusion}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{Tycho1 - Evaluation}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Training Details}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Results}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{Conclusion}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{Tycho2}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Validation}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.2}{Training Details \040Results}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.3}{Conclusion}{chapter.6}% 33
+\BOOKMARK [0][-]{chapter.7}{Tycho3}{}% 34
+\BOOKMARK [1][-]{section.7.1}{Validation}{chapter.7}% 35
+\BOOKMARK [1][-]{section.7.2}{Training Details \040Results}{chapter.7}% 36
+\BOOKMARK [1][-]{section.7.3}{Conclusion}{chapter.7}% 37
+\BOOKMARK [0][-]{chapter.8}{Tycho4}{}% 38
+\BOOKMARK [1][-]{section.8.1}{Validation}{chapter.8}% 39
+\BOOKMARK [1][-]{section.8.2}{Training Details \040Results}{chapter.8}% 40
+\BOOKMARK [1][-]{section.8.3}{Conclusion}{chapter.8}% 41
+\BOOKMARK [0][-]{chapter.9}{Model Averaging}{}% 42
+\BOOKMARK [0][-]{chapter.10}{Project Conclusion}{}% 43
+\BOOKMARK [0][-]{chapter.11}{Closing Remarks}{}% 44

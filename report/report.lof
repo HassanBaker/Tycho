@@ -1,0 +1,18 @@
+\addvspace {10pt}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Decision tree of galaxy labels in the GZ2 data set taken from Willett et al\nobreakspace {}\cite {Willett}.\relax }}{7}{figure.caption.2}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces An image of a galaxy from the GZ2 data set.\relax }}{10}{figure.caption.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Outlier images found in GZ2\relax }}{12}{figure.caption.4}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Visualization of how 4 features are extracted from one image. Figure taken from Sander Dieleman's blog\nobreakspace {}\cite {Sanders-GZ}\relax }}{13}{figure.caption.5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Visualization of how the four overlapping parts are extracted from each images created in \ref {fig:sanders-aug-1}. Figure taken from Sander Dieleman's blog\nobreakspace {}\cite {Sanders-GZ}\relax }}{13}{figure.caption.6}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram of the Tycho1 network\relax }}{14}{figure.caption.7}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The resultant RMSE's for each learning rate on each algorithm\relax }}{19}{figure.caption.8}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
