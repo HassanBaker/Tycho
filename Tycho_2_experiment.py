@@ -52,7 +52,7 @@ def create_experimental_network(number_of_conv_layers, activation_function_dense
                                    activation=activation_function_final,
                                    name="activation_layer")
 
-    y_ = tf.placeholder(tf.float32, shape=[16, NUM_LABELS], name="labels")
+    y_ = tf.placeholder(tf.float32, shape=[BATCH_SIZE, NUM_LABELS], name="labels")
 
     with tf.name_scope("OLS"):
         loss = tf.losses.mean_squared_error(y_, activation_layer)
