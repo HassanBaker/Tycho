@@ -180,13 +180,12 @@ This project studies various aspects of deep learning, by using empirical compar
 
 \end{abstract}
 
-
 \chapter{Introduction}
 
 \section{Galaxy Zoo}
 Galaxy Zoo is one of the world’s largest citizen science projects in the world. The project collects images of galaxies and invites the public to classify the images into set classes. The classification process is done by giving the citizens a set of questions to answer regarding the morphology of the galaxies in the images.  The public's assessment of the data is later aggregated and cleaned. The project managed to get more than 50 million classifications in its first year using images of galaxies taken from the Sloan Digital Sky Survey (SDSS). 
 
-Galaxy Zoo 2 (GZ2) refers to the second phase of the project. The images in the \textit{GZ2} data set compromise of the brightest 25\% from the SDSS~\cite{Willett}. This dataset contains more than 300,000 images. The public was asked to classify the galaxies in the images into 11 classes, which contain sub classes. This accumulates to 37 classes altogether. The galaxies were classified by the public’s answering of questions like “Is the galaxy smooth and rounded, with no sign of a disk?” These questions form a decision tree of 37 possibilities. 
+Galaxy Zoo 2 (GZ2) refers to the second phase of the project. The images in the \textit{GZ2} data set compromise of the brightest 25\% from the SDSS~\cite{Willett}. This dataset contains more than 300,000 images. The public was asked to classify the galaxies in the images into 11 classes, which contain sub classes. This accumulates to 37 possible classes altogether. The galaxies were classified by the public’s answering of questions like “Is the galaxy smooth and rounded, with no sign of a disk?” These questions form a decision tree of 37 possibilities, which are the labels of the dataset. 
 
     \begin{figure}[ht]
     \center
@@ -201,6 +200,13 @@ The Galaxy Zoo Galaxy Challenge was launched on the \nth{20} of December 2013 an
 
 Given the large set of image data, convolutional neural networks are an obvious choice as their use is proven to be highly effective in image recognition and analysis. However, convolutional neural network solutions, like many machine learning solutions, contain a level of complexity that originate from just how varying the model can be. One can refine at each step of the process to yield better accuracy or lower error, but in many ways, one can also over refine.
 
+\section{Neural Networks}
+Neural Networks are constructed by layers that consist of parrallel neurons which contain weights and biases. The data is inputed into the first layer. At each neuron, the input is multiplied by the weight, and the bias is added to the solution.  The output of each neuron is then put through a non-linear function. This is so as to introduce non-linearity in the network, as most data forms around non-linear models, which would mean a linear model would not fit. Each output is then passed into the folowing layer, abiding by the connection scheme i.e. in a fully connected network, each neuron passes it's output to every other neuron in the following layer. 
+
+The final layer in a neural network outputs the predictions, given an input. So as to give accurate predictions, the network is trained. Training involves putting a set of training inputs through the network, and measuring the difference between what the network predicts and what the actual values it should predict are, this is known as the loss. The loss is minimised throughout each training iteration using the backpropagation algorithm. ... backprop define + ref
+
+
+
 \section{Convolutional Neural Networks}
 
 Convolutional neural networks methods are used widely for image recognition, sound recognition, natural language processing~\cite{Bhandare}, and a whole cohort of other applications.
@@ -214,6 +220,8 @@ This feature of convolutional neural networks allows for useful methods like tra
 % \subsection{Second subsection}
 
 \chapter{Analysis}
+
+
 
 \section{Goals}
 
@@ -307,6 +315,8 @@ These extracted images overlap by design. This is so as to increase parameter sh
 
 \chapter{The Network: Tycho1}
 
+
+
 The initial convolutional neural network, named Tycho1 is a modified version of the model described in Dieleman's blog ~\cite{Sanders-GZ}. It contains four convolutional layers, and three dense layers. Tycho one differs from Dieleman~\cite{Sanders-GZ} in the dense layers, and does not perform a concatenation on augmented image segments after they have passed the convolutional layers. This is because Tycho1 is designed to train faster, so as to validate the studies regarding learning optimization algorithms, learning rate searching, and activation function comparisons. 
 
 \section{The Architecture}
@@ -371,6 +381,7 @@ There's a vital missing component in Tycho1 that has been purposely left out. Th
 What is interesting about the \textit{GZ2} dataset is that the test set contains more examples than the training set. To accommodate for this, the image augmentation described in \ref{aug-section} is used. However, unlike Dieleman's model ~\cite{Sanders-GZ}, the resulting 16 images from the augmentation process we’re not concatenated. Instead, one random image from those 16 generated was selected. This serves to create more inputs to help the model generalize more towards the active parts of each image (bottom right, where the galaxies are), and reduce chances of over-fitting. 
 
 \chapter{Deep Learning Optimizer Algorithms \& Hyper-Parameter Search} \label{study}
+
 
 A major key to deep learning is the learning optimization algorithm. The model described by Dieleman ~\cite{Sanders-GZ} details the usage of Stochastic Gradient Descent (SGD) of an initial learning rate of \(4\times10^{-2}\), and a Nesterov momentum of \(0.9\). 
 
@@ -442,6 +453,7 @@ As the Adam algorithm performed the best on all learning rates, that will be the
 
 \chapter{Tycho1 - Evaluation} \label{tycho1}
 
+
 \section{Training Details}
 
 A training script was written for the Tycho1 model using the Adam Optimizer, on a learning rate of ... The script is set to train on a mini-batch of 256, using the full training set (including the data used in validation for chapter ~\ref{study}), for 10,000 epochs. During the tests in chapter \ref{study}, it was noticed that recording the logging summaries took a substantial amount of time, when compared to training, hence the recording interval is set to 100. This means that the TensorBoard log summary was taken every 100 epochs. A nice side effect of this is smoother graphs.
@@ -502,6 +514,7 @@ An important conclusion to note, is that the training errors and test errors are
 
 \chapter{Tycho2}
 
+
 So as to decrease 
 
 \section{Validation}
@@ -512,6 +525,7 @@ So as to decrease
 
 \chapter{Tycho3}
 
+
 \section{Validation}
 
 \section{Training Details & Results}
@@ -519,6 +533,7 @@ So as to decrease
 \section{Conclusion}
 
 \chapter{Tycho4}
+
 
 \section{Validation}
 
@@ -528,9 +543,12 @@ So as to decrease
 
 \chapter{Model Averaging}
 
+
 \chapter{Project Conclusion}
 
+
 \chapter{Closing Remarks}
+
 
 
 \appendix
@@ -538,7 +556,6 @@ So as to decrease
 \renewcommand{\bibname}{References}
 \bibliographystyle{unsrt}
 \bibliography{references}
-
 
 \end{document}
 

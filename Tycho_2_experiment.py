@@ -5,9 +5,10 @@ from tools.network_blocks import *
 IMAGE_SIZE = 45
 CHANNELS = 3
 NUM_LABELS = 37
-BATCH_SIZE = 16
+BATCH_SIZE = 256
 NUM_AUGMENTS = 16
 
+NUMBER_OF_CONV_LAYERS = [4, 5]
 ACTIVATION_FUNCTIONS_DENSE = ["relu", "maxout"]
 ACTIVATION_FUNCTIONS_FINAL = ["relu", "sigmoid"]
 LEARNING_OPTIMIZER = "ADAM"
@@ -17,17 +18,24 @@ DROPOUT = [0, 0.5]
 TRAINING_EPOCHS = 2000
 RECORD_INTERVAL = 100
 SAVE_INTERVAL = 100
-NAME = "tycho_1_experiments"
+NAME = "tycho_2.1_experiments"
 AUGMENT = "CONCAT"
 
 
-def create_experimental_network(activation_function_dense, activation_function_final, dropout_prob=0):
+def create_experimental_network(number_of_conv_layers, activation_function_dense, activation_function_final,
+                                dropout_prob=0):
     tf.reset_default_graph()
 
     x = tf.placeholder(tf.float32, shape=[BATCH_SIZE * NUM_AUGMENTS, IMAGE_SIZE, IMAGE_SIZE, CHANNELS],
                        name="input")
 
-    conv = conv_layers(x)
+    conv = None
+    if number_of_conv_layers == 3:
+        conv = conv_layer_exp_1(x)
+    elif number_of_conv_layers == 4:
+        conv = conv_layers(x)
+    elif number_of_conv_layers == 5:
+        conv = conv_layer_exp_2(x)
 
     reshaped_conv_ouput = tf.reshape(conv, shape=[-1, 512 * NUM_AUGMENTS])
 
@@ -72,34 +80,39 @@ def run_experiments():
         for activation_function_final in ACTIVATION_FUNCTIONS_FINAL:
 
             for dropout_prob in DROPOUT:
-                summary, train_step, loss, x, y_ = create_experimental_network(activation_function_dense,
-                                                                               activation_function_final,
-                                                                               dropout_prob=dropout_prob)
+                for number_of_conv_layers in NUMBER_OF_CONV_LAYERS:
 
-                _NAME = NAME + "_" + \
-                        LEARNING_OPTIMIZER + "_" + \
-                        str(LEARNING_RATE) + "_" + \
-                        activation_function_dense + "_" + \
-                        activation_function_final
+                    summary, train_step, loss, x, y_ = create_experimental_network(number_of_conv_layers,
+                                                                                   activation_function_dense,
+                                                                                   activation_function_final,
+                                                                                   dropout_prob=dropout_prob)
 
-                analyzer = model_analyzer(
-                    summary,
-                    name=_NAME,
-                    augment=AUGMENT
-                )
+                    _NAME = NAME + "_" + \
+                            "CONV" + str(number_of_conv_layers) + "_" + \
+                            LEARNING_OPTIMIZER + "_" + \
+                            str(LEARNING_RATE) + "_" + \
+                            activation_function_dense + "_" + \
+                            activation_function_final + "_" + \
+                            dropout_prob
 
-                analyzer.train(
-                    train_step,
-                    loss,
-                    x,
-                    y_,
-                    TRAINING_EPOCHS,
-                    BATCH_SIZE,
-                    RECORD_INTERVAL,
-                    save_interval=SAVE_INTERVAL
-                )
+                    analyzer = model_analyzer(
+                        summary,
+                        name=_NAME,
+                        augment=AUGMENT
+                    )
 
-                print("\nCompleted - ", _NAME)
+                    analyzer.train(
+                        train_step,
+                        loss,
+                        x,
+                        y_,
+                        TRAINING_EPOCHS,
+                        BATCH_SIZE,
+                        RECORD_INTERVAL,
+                        save_interval=SAVE_INTERVAL
+                    )
+
+                    print("\nCompleted - ", _NAME)
 
 
 if __name__ == "__main__":
