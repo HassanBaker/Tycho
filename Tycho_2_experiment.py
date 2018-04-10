@@ -93,7 +93,7 @@ def run_experiments():
                             str(LEARNING_RATE) + "_" + \
                             activation_function_dense + "_" + \
                             activation_function_final + "_" + \
-                            dropout_prob
+                            str(dropout_prob)
 
                     analyzer = model_analyzer(
                         summary,
