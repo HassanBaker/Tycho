@@ -33,7 +33,7 @@ def calc_crop_amount(image_file, brightness_limit=0.1):
 
     for i in range(len(img)):
         if brightness_of_areas[i] > brightness_limit:
-            return i
+            return np.shape(img)[0] - (i * 2)
 
 
 def approx_total_crop_amount():
@@ -59,7 +59,9 @@ def approx_total_crop_amount():
     print("")
 
     average_crop_amount = sum(crop_approx) / len(crop_approx)
-    print("Average Crop Amount: ", average_crop_amount)
+    print("Average Crop Size: ", average_crop_amount)
+
+    np.savetxt("crop_analysis.csv", crop_approx, delimiter=",")
 
 
 if __name__ == '__main__':
