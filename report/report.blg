@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: report.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+Warning--entry type for "Sanders-GZ" isn't style-file defined
+--line 3 of file references.bib
+Warning--empty journal in rumelhart
+Warning--empty journal in Nguyen
+Warning--empty journal in Fang
+Warning--empty journal in maxout
+Warning--empty journal in ReLu
+You've used 8 entries,
+            1791 wiz_defined-function locations,
+            491 strings with 4856 characters,
+and the built_in function-call counts, 1662 in all, are:
+= -- 112
+> -- 122
+< -- 0
++ -- 44
+- -- 36
+* -- 118
+:= -- 299
+add.period$ -- 23
+call.type$ -- 8
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 13
+duplicate$ -- 64
+empty$ -- 144
+format.name$ -- 36
+if$ -- 344
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 7
+newline$ -- 42
+num.names$ -- 8
+pop$ -- 32
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 27
+stack$ -- 0
+substring$ -- 60
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 11
+width$ -- 9
+write$ -- 78
+(There were 6 warnings)

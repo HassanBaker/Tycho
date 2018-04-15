@@ -9,6 +9,7 @@
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage{multirow}
+\usepackage[dvips]{graphicx}
 \usepackage[
 breaklinks=true,colorlinks=true,
 %linkcolor=blue,urlcolor=blue,citecolor=blue,% PDF VIEW
@@ -196,16 +197,28 @@ Galaxy Zoo 2 (GZ2) refers to the second phase of the project. The images in the 
 
 \section{The Galaxy Challenge}
 
-The Galaxy Zoo Galaxy Challenge was launched on the \nth{20} of December 2013 and hosted on Kaggle. The competition provided the set of \textit{GZ2} data. A set of probability distributions relating to what class the public judges each image to belong to is also given as a CSV files. The objective of the competition is to reproduce similar probability distributions for a test set. The majority of the solutions produced for this competition involved machine learning, and a majority of that majority relied heavily on convolutional neural networks.
+The Galaxy Zoo Galaxy Challenge was launched on the \nth{20} of December 2013 and hosted on Kaggle. The competition provided the set of \textit{GZ2} data. A set of probability distributions relating to what class the public judges each image to belong to is also given as a CSV files. The objective of the competition is to reproduce a CSV file of probability distributions for a test set, that reflects the public's assessment of these images. The majority of the solutions produced for this competition involved machine learning, and a majority of that majority relied heavily on convolutional neural networks.
 
 Given the large set of image data, convolutional neural networks are an obvious choice as their use is proven to be highly effective in image recognition and analysis. However, convolutional neural network solutions, like many machine learning solutions, contain a level of complexity that originate from just how varying the model can be. One can refine at each step of the process to yield better accuracy or lower error, but in many ways, one can also over refine.
 
 \section{Neural Networks}
-Neural Networks are constructed by layers that consist of parrallel neurons which contain weights and biases. The data is inputed into the first layer. At each neuron, the input is multiplied by the weight, and the bias is added to the solution.  The output of each neuron is then put through a non-linear function. This is so as to introduce non-linearity in the network, as most data forms around non-linear models, which would mean a linear model would not fit. Each output is then passed into the folowing layer, abiding by the connection scheme i.e. in a fully connected network, each neuron passes it's output to every other neuron in the following layer. 
+Neural Networks are constructed by layers that consist of parallel neurons (represented by figure \ref{fig:neuron}) which contain weights and biases. The data is inputted into the first layer. At each neuron, the input is multiplied by the weight, and a bias is added to the solution. The output of each neuron is then put through a non-linear function. This is so as to introduce non-linearity in the network, as most models can be represented by non-linear functions. Each output is then passed into the following layer, abiding by the connection scheme i.e. in a fully connected network, each neuron passes it's output to every other neuron in the following layer as shown in figure \ref{fig:fully_connected}. 
 
-The final layer in a neural network outputs the predictions, given an input. So as to give accurate predictions, the network is trained. Training involves putting a set of training inputs through the network, and measuring the difference between what the network predicts and what the actual values it should predict are, this is known as the loss. The loss is minimised throughout each training iteration using the backpropagation algorithm. ... backprop define + ref
-
-
+    \begin{figure}[ht]
+    \center
+      \includegraphics[width=7cm]{images/neuron.png}
+      \caption{A neuron in a neural network which multiplies an input with a weight, adds a bias, and carrys out a non-linear activation function.}
+      \label{fig:neuron}
+    \end{figure}
+    
+    \begin{figure}[ht]
+    \center
+      \includegraphics[width=10cm]{images/fully_connected.png}
+      \caption{A fully connected network whereby all neurons in a \(layer_i\) are connected to all neurons in \(layer_i_+_1\).}
+      \label{fig:fully_connected}
+    \end{figure}
+    
+The final layer in a neural network outputs the predictions, given an input. So as to give accurate predictions, the network is trained. Training involves the use of a labeled data set. By putting a set of training inputs through the network, and measuring the difference between what the network predicts and what the actual values it should predict are, one can calculate the loss. The loss is minimized throughout each training iteration using the back-propagation algorithm ~\cite{rumelhart}. Back-propagation updates the weight values in relation to the partial deravitive of the gradient of the loss. This allows the model to predict better with repeated training. 
 
 \section{Convolutional Neural Networks}
 
@@ -217,31 +230,58 @@ Convolutional neural networks are more efficient to train and need less data tha
 
 This feature of convolutional neural networks allows for useful methods like transfer learning, whereby one can take the convolutional layers of one already trained network, attach a new fully connected layer to it, and train it to recognize something else entirely, far quicker than it would to train a whole new network.
 
-% \subsection{Second subsection}
-
 \chapter{Analysis}
-
-
 
 \section{Goals}
 
-The main goal of this project is to develop a robust convolutional neural network that can produce a probability distribution for the test set with a low level of error, using Root Mean Squared Error (RMSE) for error estimation.
+The main goal of this project is to develop a robust convolutional neural network that can produce a solution file for the test set with a low level of error, using Root Mean Squared Error (RMSE) for error estimation.
 
-This model will be built incrementally by creating an initial model, and using it to study some key components of deep learning methods and architecture. Taking the results of these studies, the model will be improved to produce more optimal models. As the data is from a Kaggle competition from four years ago, there are already solutions available on the internet. The solutions examined in this study are Team 6789~\cite{Nguyen}, Fang-Chieh Chou~\cite{Fang}, and most notably Sander Dieleman~\cite{Sanders-GZ}. Hence this project focuses on studying some of the methods used in those solutions, as well as alternatives put forward by the student.
+This model will be built incrementally by creating an initial model, and using it to study some key components of deep learning methods and architecture. Taking the results of these studies, the model will be improved to produce solutions with lower error. As the data is from a Kaggle competition from four years ago, there are already solutions available on the internet. The solutions examined in this study are Team 6789~\cite{Nguyen}, Fang-Chieh Chou~\cite{Fang}, and most notably Sander Dieleman~\cite{Sanders-GZ}. Hence this project focuses on studying some of the methods used in those solutions, as well as alternatives put forward by the student.The key areas of study in this project will focus on data preparation and processing, deep learning optimization algorithms, activation function comparisons, and hyper-parameter searching.
 
-One of the key areas of study in this project will focus on data preparation and processing, deep learning optimization algorithms, activation function comparisons, and learning rate searching.
-
-One of the studies in this project will aim to validate what the most fitting learning optimization algorithm to use, comparing Stochastic Gradient Descent (SGD), SGD with Nesterov Momentum, and Adam Optimization. This project will also study the effects of using the ReLu function against the use of the Sigmoid function in the final layer of the network. This project also aims to study the effects of the Maxout unit, described in Goodfellow et al~\cite{maxout}, as well as how it can be used in conjunction with the dropout regularization method.
+This project will aim to validate what the most fitting learning optimization algorithm to use, comparing Stochastic Gradient Descent (SGD), SGD with Nesterov Momentum, and Adam Optimization. This project will also study the effects of using the ReLu function against the use of the Sigmoid function in the final layer of the network. This project also aims to study the effects of the Maxout unit, described in Goodfellow et al~\cite{maxout}. This project aims 
 
 As a tangential goal, the student has undertaken this project to further their knowledge in deep learning methods and principles in a practical sense.
 
+\section{Methodology}
+
+So as to empirically ensure improvements, a methodology will be adhered to throughout this project. Initially the data will be analyzed and a suitable convolutional neural network will be designed to fit the data. 
+
+To ensure the the network designed works as it is intended to, the network will be put through a validation stage, whereby it is trained for a small amount of time, on 90\% of the training set, allowing the remaining 10\% to be used for validation. Throughout the validation stage, the training and validation errors and losses are taken. 
+
+On successful validation, we will move to a testing stage, whereby the network will then be trained for a longer period on the entire training set. Throughout the training solution files will be produced to get the test error.
+
+After this training period, the network will be analysed as the training error, test error, and the solutions produced should offer insight as to how to improve on the current network.
+
+Given the insights gained from training, a new network will be then be created to better fit the data. The new network will be put through validation and testing. 
+
+This process will be repeated throughout this project. 
+
+It's worth noting that since access to the training set's labels is not available, this report will mainly focus on the error values, rather than loss values. However, throughout development, loss had proven to be quite effective for ensuring that the models are behaving as expected.
 \section{Tools}
 
-(Nothing here yet)
+\subsection{Hardware}
+The primary machine used in this project is one of the computer science department's Alienware GPU workstations, containing an Intel i7-6800K hexacore CPU and an Nvidia GTX 1080 GPU. However, so as to run multiple experiments at once, one of the UCC Netsoc (Networking and Technology Society) servers was used, leela.netsoc.co, which contains an Intel Xeon E5-2630.
+
+\subsection{TensorFlow}
+The main framework used is TensorFlow. TensorFlow offers a very intuitive method of for developing neural networks, with many examples available. It contains plenty of up to date features and a large support base. A key reason for the selection of TensorFlow is that it has a Python API as teh student is very comfortable with Python. However, the most vital reason for the selection of TensorFlow is TensorBoard. It's highly difficult to debug neural networks. For the most part, the developer spends a majority of the time looking at graphs. The TensorBoard graphs are not only highly intuitive to code in TensorFlow, but also offer a lot more than alternatives like matplotlib. Moreover, TensorBoard simply offers a lot more, for a lot less work. For example, on the scalar view, there is a smoothing function which applies a linear filter to graphs so as to reduce noise as with gradient descent methods there tends to be a lot of rapid oscillations, which when plotted exactly can look like a mess. It is worth noting that throughout this project the reported error values used are after a smoothing factor of \(0.85\). This makes the data more concise and better reflects the models' performences.
+
+The student has however experienced some negative aspects of working with TensorFlow. Although there are many examples and StackOverflow answers available, the documentation is quite lacking. The documentation tends to assume that you know what a certain method or object does and how it does it. There are cases where on the documentation page, rather than giving meaningul information, only a citation of the paper which the implementation replicates is described. Another example of bad documentation is the session storing feature, which allows the developer to save and restore a TensorFlow graph and session. There is simply too many ways of implementing this, and each offer different purposes with little documentation on what the purposes are. Luckily there are StackOverflow examples for this. Moreover, an even greater issue experience with TensorFlow is the inability to write custom activation functions, as there is currently no Python implementation for updating gradients throughout a TensorFlow graph. 
+
+    \begin{figure}[ht]
+    \center
+      \includegraphics[width=16cm]{images/tensor_board.png}
+      \caption{Screenshot of TensorBoard}
+      \label{fig:tb_sc}
+    \end{figure}
+      
+
+\subsection{IDE: Jupyter Notebook/PyCharm}
+Initially Jupyter Notebook was used to develop the codebase as it offers a great documentation feature, which is very handy for machine learning projects. However many issues started to arise as the codebase got more complex. For instance, when a cell in a Jupyter Notebook is run, it is automatically cached in main memory. This is not only inneffecient when working with a large dataset, but also problematic when working with TensorFlow, as when there is multiple Jupyter Notebooks running, conflicts between different TensorFlow graphs arise which make debugging harder than need be. This resulted in a lot of kernel restarts. Moreover, it was found that Jupyter Notebook simply encouraged bad coding habits, as it's easier to get in the habit of writing small scripts in the cells of a Jupyter Notebook, rather modularising a code base for reuse. Hence the student switched to using the PyCharm IDE, which does not contain any of these issues. 
+
 
 \section{The Data}
 
-The \textit{GZ2} dataset consists of 61,578 training images, 79,975 test images, a CSV file consisting of the 37 probability distributions for each example in the training set, as well as CSV files containing all one ones, all zeros and central pixel benchmarks for comparison when training. The test set solutions are not provided, instead one is required to generate a CSV file with their own solutions and submit them. Seeing this is a large dataset, \textit{holdout} validation was used instead of \textit{k-fold}, as \textit{k-fold} would otherwise be far too time consuming. A validation set was created from 10\% of the training set. This 10\% portion was moved into its own directory and was not used for analysis or training. This allowed for \textit{holdout} validation throughout analysis and training.
+The \textit{GZ2} dataset consists of 61,578 training images, 79,975 test images, a CSV file consisting of the 37 probability distributions for each example in the training set, as well as CSV files containing all one ones, all zeros and central pixel benchmarks for comparison when training. The test set solutions are not provided, instead one is required to generate a CSV file with their own solutions and submit them. Seeing as this is a large dataset, \textit{holdout} validation was used instead of \textit{k-fold}, as \textit{k-fold} would otherwise be far too time consuming. A validation set was created from 10\% of the training set. This 10\% portion was moved into its own directory and was not used for analysis or training. This allowed for \textit{holdout} validation throughout analysis and training.
 
 
     \begin{figure}[ht]
@@ -315,8 +355,6 @@ These extracted images overlap by design. This is so as to increase parameter sh
 
 \chapter{The Network: Tycho1}
 
-
-
 The initial convolutional neural network, named Tycho1 is a modified version of the model described in Dieleman's blog ~\cite{Sanders-GZ}. It contains four convolutional layers, and three dense layers. Tycho one differs from Dieleman~\cite{Sanders-GZ} in the dense layers, and does not perform a concatenation on augmented image segments after they have passed the convolutional layers. This is because Tycho1 is designed to train faster, so as to validate the studies regarding learning optimization algorithms, learning rate searching, and activation function comparisons. 
 
 \section{The Architecture}
@@ -382,7 +420,6 @@ What is interesting about the \textit{GZ2} dataset is that the test set contains
 
 \chapter{Deep Learning Optimizer Algorithms \& Hyper-Parameter Search} \label{study}
 
-
 A major key to deep learning is the learning optimization algorithm. The model described by Dieleman ~\cite{Sanders-GZ} details the usage of Stochastic Gradient Descent (SGD) of an initial learning rate of \(4\times10^{-2}\), and a Nesterov momentum of \(0.9\). 
 
 However, there are alternatives to this algorithm. Most notably, SGD without Nesterov momentum and Adam optimization. A comparison of these algorithms was made on separate learning rates so as to empirically decide on the most suitable.
@@ -391,15 +428,13 @@ However, there are alternatives to this algorithm. Most notably, SGD without Nes
 
 [Todo - Add tables and graphs]
 
-The Tycho1 network was set up to take an input of a mini-batch of \(16\) images, that are augmented, with one of the augmented images chosen at random. This model would train for \(2000\) epochs. 
+The Tycho1 network was set up to take an input of a mini-batch of \(16\) images, that are augmented \(16\) times each, with one of the augmented images chosen at random. This model would train for \(2000\) epochs. 
 
-To compare the algorithms, the training was run in a for loop to try out the different algorithms along with four different learning rates \(4\times10^{-2}\), \(4\times10{^-3}\), \(1\times{10^-4}\), and \(1\times10^{-4}\). Throughout these iterations, the loss and error values on both the training set and validation set is taken every 10 epochs. TensorBoard proved to be a vital tool for carrying out this comparison. It made it so that the loss and error values were stored and easily compared by overlaying them through the UI.
+To compare the algorithms, the training was run in a loop to try out the different algorithms along with four different learning rates \(4\times10^{-2}\), \(4\times10{^-3}\), \(1\times{10^-4}\), and \(1\times10^{-4}\). Throughout these iterations, the loss and error values on both the training set and validation set is taken every 10 epochs. TensorBoard proved to be a vital tool for carrying out this comparison. It made it so that the loss and error values were stored and easily compared by overlaying them through the UI.
 
 \section{Results}
 
 Each algorithm took roughly thirty five minutes to complete one iteration on one learning rate, so the whole comparison took about 7 hours to complete.
-
-It's worth noting that on many occasions the validation error is lower than the training error. This was discovered after the comparison, and is expected to have something to do with the size of the validation set, in comparison to the training set
 
 \subsection{Stochastic Gradient Descent}
 
@@ -452,7 +487,6 @@ From the results of section \ref{Adam}, it looks apparent that lower learning ra
 As the Adam algorithm performed the best on all learning rates, that will be the chosen algorithm for the models. Furthermore, by looking at the graphs on TensorBoard of all the tests carried out on the Adam algorithm, with a smoothing of \(0.85\), the learning rate of \(4\times{10^-4}\) seemed to be a marginally better choice than \(4\times{10^-2}\), even though it began to converge later, it ended with a lower RMSE. Furthermore also sloped further down than the learning rate of \(4\times{10^-2}\), indicating that it will perform even better if it was run further. Hence the chosen learning rate is \(4\times{10^-4}\).
 
 \chapter{Tycho1 - Evaluation} \label{tycho1}
-
 
 \section{Training Details}
 
@@ -512,23 +546,47 @@ Allowing the network to run for another day or two would very likely get it in t
 
 An important conclusion to note, is that the training errors and test errors are reasonably close to each other, indicating that the assumption of the validation set being to small is correct. This means that we can expect validation loss and error to be lower than training loss and error throughout.
 
-\chapter{Tycho2}
+\chapter{Tycho1.2}
 
-
-So as to decrease 
+So as to decrease the error, ReLu activation is used in the final layer of the Tycho1.2 network. The reasoning here is that although ReLu does not restrict the output to a range of \(0 < x < 1\), this shouldn't be an issue as the input is already normalized to that range, and all the variables in the network (weights and biases) are bound to that range as well. Moreover, a required feature of ReLu is it's ability to detect hard zeros, which the model contains plenty of.
 
 \section{Validation}
 
+So as to validate this hypothesis, an experiment on the Tycho1.2 network is run with the Adam optimizer at a learning rate of ... on a mini-batch of 16 for 2000 epochs. This is the same configuration used in the training of of Tycho1, and was validated in section ... Hence we compare the results of the Tycho1.2 validation to the results of Tycho1 of the same configuration in section ...
+
+\subsection{Experiment Results}
+
+After 2000 epochs, the Tycho1.2 model produced a training error of \(0.1559\), and a validation error of \(0.1287\), where as the Tycho1 model had produced a training error of \(0.1566\), and a validation error of \(...\). However, it is more interesting to see the results at the start of the experiments. The Tycho1 network starts with a training error of \(\) and a validation error of \(\), where as the Tycho1.2 begins with a training error of \(\), and a validation error of \(\). Moreover, the Tycho1.2 network converges quicker, as after after 200 epochs the Tycho1 network produces a training error of \(...\), and a validation error of \(...\), where as the Tycho1.2 network produces a a training error of \(...\), and a validation error of \(...\).
+
+\subsection{Experiment Conclusion}
+
+The results shown in this experiment prove that using ReLu activation in the final layer of this network produces better predictions given this dataset, hence this should reflect in the training. 
+
 \section{Training Details & Results}
+
+The Tycho1.2 network is run with the Adam optimizer at a learning rate of ... on a mini-batch of 256 for 2000 epochs, just as the Tycho1 network was in section ... Throughout the training of this model, the test error was evaluated so as to compare with the Tycho1 solutions. 
+
+The training of this model proved to be far more effective than the Tycho1 model, as the effects of the ReLu rectifier in the final layer were apparent early on. A solution CSV file was generated after 500 training epochs with the Tycho1.2 network so as to analyse it at an early stage. This CSV file contains plenty of hard zeros in it, which is as hypothesized . The Tycho1.2 network shows much quicker convergence from the start and keeps doing so up to around 5000 training epochs. Although the network does continue to improve after 5000 epochs, this improvement does slow down. So as to analyse the network further, it was left to train for approximately 7 days. At the .... epoch, it produced a solution with a test error of .... 
 
 \section{Conclusion}
 
-\chapter{Tycho3}
+What we can conclude from this training is that using ReLu activation in the final layer empirically improves the model's prediction, and greatly speeds up training. The lowest test error which this model produces is of ..., which would rank \nth{38} in the Kaggle competition, which although significant, did take 7 days to achieve. Throughout those 7 days of training, the model's improvement did show great signs of slowing down. Hence, leaving it train any further would not be too wise, as this model is still underfitting. 
 
+\chapter{The Network: Tycho2}
+
+Seeing as the Tycho1, and Tycho1.2 networks both exhibit signs of underfitting, we will need a network with more parameters to better fit the data. Hence, we develop a new network, titled Tycho2. This network will have larger fully connected layers so as to increase parameters. Moreover, this network will use a similar data augmentation step as described by Sanders dd ~\cite{Sanders-GZ}.
+
+Each input image is processed to generate 16 different augments as described in section ...data... All of these 16 augments are fed through the convolutional layers. After the augmented images go through the convolutional layers, the 16 augments of each image are concatenated into one bigger feature. This feature is then fed through two fully connected dense layers. This sees that the first dense layer is 16 times greater than that in Tycho1. This process is described in figure ...
 
 \section{Validation}
 
+The Tycho2 network is trained for 2000 epochs with a mini-batch of 16, just as the Tycho1.2 network was. This validation doesn't give way to much insight, but it does show that increasing the parameters does indeed improve the model, as both training and validation errors are lower after 2000 epochs.
+
+%table 
+
 \section{Training Details & Results}
+
+	This 
 
 \section{Conclusion}
 
@@ -546,12 +604,20 @@ So as to decrease
 
 \chapter{Project Conclusion}
 
-
 \chapter{Closing Remarks}
+%    \includegraphics[scale=0.1]{graphs/tycho_1_SGD_0.004_sigmoid.jpg}
 
 
 
-\appendix
+\begin{appendices}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{graphs/tycho_1_SGD_0.004_sigmoid.jpg}
+    \caption{test}
+    \label{fig:tycho_1_SGD_0.04_sigmoid}
+\end{figure}
+
+\end{appendices}
 
 \renewcommand{\bibname}{References}
 \bibliographystyle{unsrt}

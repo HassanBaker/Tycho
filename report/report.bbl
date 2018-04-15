@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{Willett}
+K.~W. Willett, C.~J. Lintott, S.~P. Bamford, K.~L. Masters, B.~D. Simmons,
+  K.~R.V. Casteels, E.~M. Edmondson, L.~F. Fortson, S.~Kaviraj, W.~C. Keel,
+  T.~Melvin, R.~C. Nichol, M.~J. Raddick, K.~Schawinski, R.~J. Simpson, R.~A.
+  Skibba, A.~M. Smith, and D.~Thomas.
+\newblock Galaxy zoo 2: detailed morphological classifications for 304,122
+  galaxies from the sloan digital sky survey.
+\newblock {\em Mon. Not. R. Astron. Soc.}, 000:1--29, 2013.
+
+\bibitem{Sanders-GZ}
+S.~Dieleman.
+\newblock My solution for the galaxy zoo challenge, 2014.
+
+\bibitem{rumelhart}
+David E.~Rumelhart, Geoffrey E.~Hinton, and Ronald J.~Williams.
+\newblock Learning representations by back propagating errors.
+\newblock 323:533--536, 10 1986.
+
+\bibitem{Bhandare}
+Ashwin Bhandare, Maithili Bhide, Pranav Gokhale, and Rohan Chandavarkar.
+\newblock Applications of convolutional neural networks.
+\newblock {\em (IJCSIT) International Journal of Computer Science and
+  Information Technologies}, 7(5):2206--2215, 2016.
+
+\bibitem{Nguyen}
+Tu~Dinh Nguyen and Truyen Tran.
+\newblock Galaxy zoo challenge with convolutional neural networks.
+\newblock 2014.
+
+\bibitem{Fang}
+C~Fang-Chieh.
+\newblock Galaxy zoo challenge: Classify galaxy morphologies from images.
+\newblock 2014.
+
+\bibitem{maxout}
+Ian Goodfellow, David Warde-Farley, Mehdi Mirza, Aaron Courville, and Yoshua
+  Bengio.
+\newblock Maxout networks.
+\newblock 2013.
+
+\bibitem{ReLu}
+V.~Nair and G.~E. Hinton.
+\newblock Rectified linear units improve restricted boltzmann machines.
+\newblock 2010.
+
+\end{thebibliography}
