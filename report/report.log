@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.5)  15 APR 2018 23:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.5)  19 APR 2018 06:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -894,20 +894,56 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip186
 )
+
+! LaTeX Error: Two \documentclass or \documentstyle commands.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \documentclass{
+                    article}
+The document may only declare one class.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count156
+\lst@gtempboxa=\box31
+\lst@token=\toks28
+\lst@length=\count157
+\lst@currlwidth=\dimen162
+\lst@column=\count158
+\lst@pos=\count159
+\lst@lostspace=\dimen163
+\lst@width=\dimen164
+\lst@newlines=\count160
+\lst@lineno=\count161
+\lst@maxwidth=\dimen165
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count162
+\lst@skipnumbers=\count163
+\lst@framebox=\box32
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count156
-\Gm@cntv=\count157
-\c@Gm@tempcnt=\count158
-\Gm@bindingoffset=\dimen162
-\Gm@wd@mp=\dimen163
-\Gm@odd@mp=\dimen164
-\Gm@even@mp=\dimen165
-\Gm@layoutwidth=\dimen166
-\Gm@layoutheight=\dimen167
-\Gm@layouthoffset=\dimen168
-\Gm@layoutvoffset=\dimen169
-\Gm@dimlist=\toks28
+\Gm@cnth=\count164
+\Gm@cntv=\count165
+\c@Gm@tempcnt=\count166
+\Gm@bindingoffset=\dimen166
+\Gm@wd@mp=\dimen167
+\Gm@odd@mp=\dimen168
+\Gm@even@mp=\dimen169
+\Gm@layoutwidth=\dimen170
+\Gm@layoutheight=\dimen171
+\Gm@layouthoffset=\dimen172
+\Gm@layoutvoffset=\dimen173
+\Gm@dimlist=\toks29
 )
 
 Package geometry Warning: Over-specification in `h'-direction.
@@ -920,25 +956,25 @@ Package geometry Warning: Over-specification in `v'-direction.
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 94.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-LaTeX Info: Redefining \microtypecontext on input line 61.
+LaTeX Info: Redefining \microtypecontext on input line 94.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -971,41 +1007,43 @@ e
 ))
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count159
-\scratchdimen=\dimen170
-\scratchbox=\box31
-\nofMPsegments=\count160
-\nofMParguments=\count161
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count162
-\MPscratchDim=\dimen171
-\MPnumerator=\count163
-\makeMPintoPDFobject=\count164
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count167
+\scratchdimen=\dimen174
+\scratchbox=\box33
+\nofMPsegments=\count168
+\nofMParguments=\count169
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count170
+\MPscratchDim=\dimen175
+\MPnumerator=\count171
+\makeMPintoPDFobject=\count172
+\everyMPtoPDFconversion=\toks31
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring ON on input line 61.
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring ON on input line 94.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count165
+\c@section@level=\count173
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 61.
-LaTeX Info: Redefining \ref on input line 61.
-LaTeX Info: Redefining \pageref on input line 61.
-LaTeX Info: Redefining \nameref on input line 61.
+LaTeX Info: Redefining \nameref on input line 94.
+LaTeX Info: Redefining \ref on input line 94.
+LaTeX Info: Redefining \pageref on input line 94.
+LaTeX Info: Redefining \nameref on input line 94.
 (./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
+\c@lstlisting=\count174
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1014,15 +1052,16 @@ LaTeX Info: Redefining \nameref on input line 61.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
+* bindingoffset: 28.45274pt
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* h-part:(L,W,R)=(113.81102pt, 341.43309pt, 113.81102pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
+* \textwidth=341.43309pt
 * \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
+* \oddsidemargin=69.99377pt
+* \evensidemargin=41.54103pt
 * \topmargin=-35.5119pt
 * \headheight=14.5pt
 * \headsep=19.8738pt
@@ -1048,29 +1087,29 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.71 \begin{page}
-                 
+l.104 \begin{page}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 90.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 123.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 103.
+(Font)              <12> on input line 136.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 103.
+(Font)              <8> on input line 136.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 103.
+(Font)              <6> on input line 136.
 
-<images/ucc.jpeg, id=212, 63.3567pt x 80.9424pt>
+<images/ucc.jpeg, id=369, 63.3567pt x 80.9424pt>
 File: images/ucc.jpeg Graphic file (type jpg)
  <use images/ucc.jpeg>
-Package pdftex.def Info: images/ucc.jpeg used on input line 125.
+Package pdftex.def Info: images/ucc.jpeg used on input line 158.
 (pdftex.def)             Requested size: 113.81102pt x 145.41212pt.
 
 
@@ -1080,7 +1119,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.130 \end{page}
+l.163 \end{page}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1089,338 +1128,820 @@ or  <return>  to continue without it.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/ucc.jpeg>]
-(./report.toc
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
- [2
 
-]
-! Misplaced alignment tab character &.
-<argument> ...{\numberline {6.2}Training Details &
-                                                   Results}\hyper@linkend 
-l.39 ...aining Details & Results}{27}{section.6.2}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-<argument> ...{\numberline {7.2}Training Details &
-                                                   Results}\hyper@linkend 
-l.43 ...aining Details & Results}{28}{section.7.2}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-<argument> ...{\numberline {8.2}Training Details &
-                                                   Results}\hyper@linkend 
-l.47 ...aining Details & Results}{30}{section.8.2}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-) [3] (./report.lof
-! Double subscript.
-<argument> ...nnected to all neurons in \(layer_i_
-                                                  +_1\).\relax }}\hyper@link...
-l.4 ...ayer_i_+_1\).\relax }}{8}{figure.caption.4}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-<argument> ...ected to all neurons in \(layer_i_+_
-                                                  1\).\relax }}\hyper@linkend 
-l.4 ...ayer_i_+_1\).\relax }}{8}{figure.caption.4}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-) [4]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 147.
- [5
-
-]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 186.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 186.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-)
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 186.
-Package microtype Info: Loading generic settings for font family
-(microtype)             `phv' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-<images/gz-2-decision-tree.png, id=325, 838.13126pt x 696.6025pt>
-File: images/gz-2-decision-tree.png Graphic file (type png)
-
-<use images/gz-2-decision-tree.png>
-Package pdftex.def Info: images/gz-2-decision-tree.png used on input line 193.
-(pdftex.def)             Requested size: 455.24411pt x 378.37064pt.
- [6
-
-] [7 <./images/gz-2-decision-tree.png>]
-<images/neuron.png, id=343, 793.96625pt x 532.99126pt>
-File: images/neuron.png Graphic file (type png)
- <use images/neuron.png>
-Package pdftex.def Info: images/neuron.png used on input line 209.
-(pdftex.def)             Requested size: 199.16928pt x 133.70291pt.
-
-<images/fully_connected.png, id=344, 542.025pt x 211.79124pt>
-File: images/fully_connected.png Graphic file (type png)
-
-<use images/fully_connected.png>
-Package pdftex.def Info: images/fully_connected.png used on input line 216.
-(pdftex.def)             Requested size: 284.52756pt x 111.17914pt.
-
-! Double subscript.
-<argument> ...nnected to all neurons in \(layer_i_
-                                                  +_1\).
-l.217 ...ected to all neurons in \(layer_i_+_1\).}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-<argument> ...ected to all neurons in \(layer_i_+_
-                                                  1\).
-l.217 ...ected to all neurons in \(layer_i_+_1\).}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-<argument> ...nnected to all neurons in \(layer_i_
-                                                  +_1\).
-l.217 ...ected to all neurons in \(layer_i_+_1\).}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Double subscript.
-<argument> ...ected to all neurons in \(layer_i_+_
-                                                  1\).
-l.217 ...ected to all neurons in \(layer_i_+_1\).}
-                                                  
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-[8 <./images/neuron.png> <./images/fully_connected.png>] [9] [10
-
-]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 262.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 262.
- [11]
-<images/tensor_board.png, id=374, 1909.1325pt x 978.65625pt>
-File: images/tensor_board.png Graphic file (type png)
-
-<use images/tensor_board.png>
-Package pdftex.def Info: images/tensor_board.png used on input line 272.
-(pdftex.def)             Requested size: 455.24408pt x 233.35913pt.
- [12 <./images/tensor_board.png>]
-<images/100023.jpg, id=381, 319.1925pt x 319.1925pt>
-File: images/100023.jpg Graphic file (type jpg)
- <use images/100023.jpg>
-Package pdftex.def Info: images/100023.jpg used on input line 289.
-(pdftex.def)             Requested size: 199.16928pt x 199.16849pt.
-
-[13 <./images/100023.jpg>]
-<images/maximum-256411.jpg, id=391, 319.1925pt x 319.1925pt>
-File: images/maximum-256411.jpg Graphic file (type jpg)
-
-<use images/maximum-256411.jpg>
-Package pdftex.def Info: images/maximum-256411.jpg used on input line 312.
-(pdftex.def)             Requested size: 182.09486pt x 182.09259pt.
-
-<images/minimum-308196.jpg, id=392, 319.1925pt x 319.1925pt>
-File: images/minimum-308196.jpg Graphic file (type jpg)
-
-<use images/minimum-308196.jpg>
-Package pdftex.def Info: images/minimum-308196.jpg used on input line 316.
-(pdftex.def)             Requested size: 182.09486pt x 182.09259pt.
- [14]
-<images/sanders-aug-1.png, id=402, 216.81pt x 103.3461pt>
-File: images/sanders-aug-1.png Graphic file (type png)
-
-<use images/sanders-aug-1.png>
-Package pdftex.def Info: images/sanders-aug-1.png used on input line 339.
-(pdftex.def)             Requested size: 455.24411pt x 217.02689pt.
- [15 <./images/maximum-256411.jpg> <./images/minimum-308196.jpg>] <images/sande
-rs-aug-2.png, id=409, 144.54pt x 68.1747pt>
-File: images/sanders-aug-2.png Graphic file (type png)
-
-<use images/sanders-aug-2.png>
-Package pdftex.def Info: images/sanders-aug-2.png used on input line 349.
-(pdftex.def)             Requested size: 455.24411pt x 214.73578pt.
- [16 <./images/sanders-aug-1.png> <./images/sanders-aug-2.png>] <images/Tycho1.
-png, id=422, 1471.4975pt x 543.02875pt>
-File: images/Tycho1.png Graphic file (type png)
-
-<use images/Tycho1.png>
-Package pdftex.def Info: images/Tycho1.png used on input line 364.
-(pdftex.def)             Requested size: 455.24411pt x 167.99744pt.
- [17
-
- <./images/Tycho1.png>] [18] [19] [20
-
-] [21] [22]
-! Missing = inserted for \ifnum.
-<to be read again> 
-                   ,
-l.501 ...hen the training reached the \nth{12,000}
-                                                   epoch, and onward from th...
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   ,
-l.501 ...hen the training reached the \nth{12,000}
-                                                   epoch, and onward from th...
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing = inserted for \ifnum.
-<to be read again> 
-                   ,
-l.501 ...hen the training reached the \nth{12,000}
-                                                   epoch, and onward from th...
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   ,
-l.501 ...hen the training reached the \nth{12,000}
-                                                   epoch, and onward from th...
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-[23
-
-] [24] [25] [26
-
-]
-! Misplaced alignment tab character &.
-<argument> Training Details &
-                              Results
-l.565 \section{Training Details & Results}
-                                          
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `alignment tab' on input line 565.
-
-[27]
-! Misplaced alignment tab character &.
-<argument> Training Details &
-                              Results
-l.587 \section{Training Details & Results}
-                                          
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `alignment tab' on input line 587.
-
-[28
-
-] [29]
-! Misplaced alignment tab character &.
-<argument> Training Details &
-                              Results
-l.598 \section{Training Details & Results}
-                                          
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `alignment tab' on input line 598.
-
-[30
-
-] [31
-
-] [32
-
-]
-
-! LaTeX Error: Cannot determine size of graphic in graphs/tycho_1_SGD_0.004_sig
-moid.jpg (no BoundingBox).
+! LaTeX Error: Environment Abstract undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.615 ...42]{graphs/tycho_1_SGD_0.004_sigmoid.jpg}
+l.170 \begin{Abstract}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Try loading font information for T1+phv on input line 174.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `phv' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 174.
+
+
+! LaTeX Error: \begin{document} ended by \end{Abstract}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
                                                   
+l.199 \end{Abstract}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[2
+
+
+]
+
+! LaTeX Error: Environment Declaration Of OriginalityOrginality undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.205 \begin{Declaration Of OriginalityOrginality}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 210.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 216.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
+
+
+! LaTeX Error: \begin{document} ended by \end{Declaration Of Originality}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.223 \end{Declaration Of Originality}
+                                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[3
+
+
+]
+
+! LaTeX Error: Environment Acknowledgements undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.228 \begin{Acknowledgements}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{Acknowledgements}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.233 \end{Acknowledgements}
+                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[4
+
+
+] (./report.toc [5
+
+]
+Overfull \hbox (11.5529pt too wide) in paragraph at lines 34--34
+ [][] [][][]\T1/ptm/b/n/12 Study: Learn-ing Op-ti-mizer Al-go-rithms & Hyper-Pa
+rameter 
+ []
+
+[6] [7]) (./report.lof
+! Double subscript.
+<argument> ...nnected to all neurons in \(layer_i_
+                                                  +_1\). Image taken from ht...
+l.7 ...m/chap1.html\relax }}{25}{figure.caption.8}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> ...ected to all neurons in \(layer_i_+_
+                                                  1\). Image taken from http...
+l.7 ...m/chap1.html\relax }}{25}{figure.caption.8}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+Overfull \hbox (94.1345pt too wide) in paragraph at lines 16--16
+ [][] [][][]\T1/ptm/m/n/12 (-20) Graph of ReLu ac-ti-va-tion. Taken from https:
+//towardsdatascience.com/activation- 
+ []
+
+[8]
+Overfull \hbox (105.90598pt too wide) in paragraph at lines 17--17
+ [][] [][][]\T1/ptm/m/n/12 (-20) Graph of sig-moid ac-ti-va-tion. Taken from ht
+tps://towardsdatascience.com/activation- 
+ []
+
+
+Overfull \hbox (8.13628pt too wide) in paragraph at lines 21--21
+ [][] [][][]\T1/ptm/m/n/12 (-20) TensorBoard graph of Ty-cho1 net-work train-in
+g (with a smooth- 
+ []
+
+[9] [10]) [11]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 260.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 262.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 262.
+
+<images/gz-2-decision-tree.png, id=686, 838.13126pt x 696.6025pt>
+File: images/gz-2-decision-tree.png Graphic file (type png)
+
+<use images/gz-2-decision-tree.png>
+Package pdftex.def Info: images/gz-2-decision-tree.png used on input line 269.
+(pdftex.def)             Requested size: 341.43309pt x 283.77pt.
+ [12
+
+
+] [13 <./images/gz-2-decision-tree.png>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 289.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 289.
+[14]
+! Undefined control sequence.
+l.306 ...work described by Sander Dieleman ~\citep
+                                                  {Sanders-GZ} in TensorFlow...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[15] [16] [17
+
+] <images/tensor_board.png, id=726, 1909.1325pt x 978.65625pt>
+File: images/tensor_board.png Graphic file (type png)
+
+<use images/tensor_board.png>
+Package pdftex.def Info: images/tensor_board.png used on input line 327.
+(pdftex.def)             Requested size: 341.43309pt x 175.01561pt.
+ [18 <./images/tensor_board.png>]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 344.
+
+(./network_dict.py [19] [20]) [21] [22] [23]
+<images/neuron.png, id=834, 793.96625pt x 532.99126pt>
+File: images/neuron.png Graphic file (type png)
+ <use images/neuron.png>
+Package pdftex.def Info: images/neuron.png used on input line 376.
+(pdftex.def)             Requested size: 341.43306pt x 229.20618pt.
+
+<images/fully_connected.png, id=835, 542.025pt x 211.79124pt>
+File: images/fully_connected.png Graphic file (type png)
+
+<use images/fully_connected.png>
+Package pdftex.def Info: images/fully_connected.png used on input line 383.
+(pdftex.def)             Requested size: 341.43309pt x 133.41626pt.
+
+! Double subscript.
+<argument> ...nnected to all neurons in \(layer_i_
+                                                  +_1\). Image taken from ht...
+l.384 ...alnetworksanddeeplearning.com/chap1.html}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> ...ected to all neurons in \(layer_i_+_
+                                                  1\). Image taken from http...
+l.384 ...alnetworksanddeeplearning.com/chap1.html}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> ...nnected to all neurons in \(layer_i_
+                                                  +_1\). Image taken from ht...
+l.384 ...alnetworksanddeeplearning.com/chap1.html}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Double subscript.
+<argument> ...ected to all neurons in \(layer_i_+_
+                                                  1\). Image taken from http...
+l.384 ...alnetworksanddeeplearning.com/chap1.html}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+[24
+
+] [25 <./images/neuron.png> <./images/fully_connected.png>] [26] [27]
+<images/100023.jpg, id=863, 319.1925pt x 319.1925pt>
+File: images/100023.jpg Graphic file (type jpg)
+ <use images/100023.jpg>
+Package pdftex.def Info: images/100023.jpg used on input line 412.
+(pdftex.def)             Requested size: 199.16928pt x 199.16849pt.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 418.
+
+[28
+
+ <./images/100023.jpg>] [29]
+<images/maximum-256411.jpg, id=876, 319.1925pt x 319.1925pt>
+File: images/maximum-256411.jpg Graphic file (type jpg)
+
+<use images/maximum-256411.jpg>
+Package pdftex.def Info: images/maximum-256411.jpg used on input line 436.
+(pdftex.def)             Requested size: 136.57115pt x 136.56822pt.
+
+<images/minimum-308196.jpg, id=877, 319.1925pt x 319.1925pt>
+File: images/minimum-308196.jpg Graphic file (type jpg)
+
+<use images/minimum-308196.jpg>
+Package pdftex.def Info: images/minimum-308196.jpg used on input line 440.
+(pdftex.def)             Requested size: 136.57115pt x 136.56822pt.
+
+Underfull \hbox (badness 1275) in paragraph at lines 441--441
+\T1/ptm/m/n/10.95 (+20) i-mum crop due to the very
+ []
+
+<images/crop_analysis.png, id=878, 1433.355pt x 756.8275pt>
+File: images/crop_analysis.png Graphic file (type png)
+
+<use images/crop_analysis.png>
+Package pdftex.def Info: images/crop_analysis.png used on input line 449.
+(pdftex.def)             Requested size: 341.43309pt x 180.27962pt.
+ [30 <./images/maximum-256411.jpg> <./images/minimum-308196.jpg>] <images/sande
+rs-aug-1.png, id=888, 216.81pt x 103.3461pt>
+File: images/sanders-aug-1.png Graphic file (type png)
+
+<use images/sanders-aug-1.png>
+Package pdftex.def Info: images/sanders-aug-1.png used on input line 470.
+(pdftex.def)             Requested size: 341.43309pt x 162.76938pt.
+ [31 <./images/crop_analysis.png>]
+<images/sanders-aug-2.png, id=897, 144.54pt x 68.1747pt>
+File: images/sanders-aug-2.png Graphic file (type png)
+
+<use images/sanders-aug-2.png>
+Package pdftex.def Info: images/sanders-aug-2.png used on input line 480.
+(pdftex.def)             Requested size: 341.43309pt x 161.05106pt.
+ [32 <./images/sanders-aug-1.png> <./images/sanders-aug-2.png>] <images/Tycho1.
+png, id=910, 1471.4975pt x 543.02875pt>
+File: images/Tycho1.png Graphic file (type png)
+
+<use images/Tycho1.png>
+Package pdftex.def Info: images/Tycho1.png used on input line 495.
+(pdftex.def)             Requested size: 341.43309pt x 125.996pt.
+ [33
+
+ <./images/Tycho1.png>]
+<images/relu.png, id=916, 362.35374pt x 289.08pt>
+File: images/relu.png Graphic file (type png)
+ <use images/relu.png>
+Package pdftex.def Info: images/relu.png used on input line 516.
+(pdftex.def)             Requested size: 199.16928pt x 158.89745pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--517
+[]\T1/ptm/m/n/12 (+20) Figure 5.2: |Graph of ReLu ac-ti-va-tion. Taken from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--517
+\T1/ptm/m/n/12 (+20) https://towardsdatascience.com/activation-functions-neural
+-networks-
+ []
+
+[34 <./images/relu.png>] <images/sigmoid.png, id=928, 368.37625pt x 293.095pt>
+File: images/sigmoid.png Graphic file (type png)
+
+<use images/sigmoid.png>
+Package pdftex.def Info: images/sigmoid.png used on input line 540.
+(pdftex.def)             Requested size: 199.16928pt x 158.46571pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--541
+[]\T1/ptm/m/n/12 (+20) Figure 5.3: |Graph of sig-moid ac-ti-va-tion. Taken from
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--541
+\T1/ptm/m/n/12 (+20) https://towardsdatascience.com/activation-functions-neural
+-networks-
+ []
+
+[35 <./images/sigmoid.png>] [36] [37
+
+]
+
+Class memoir Warning: The material used in the headers is too large
+(28.99998pt) for the given head height (14.5pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 595.
+
+
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
+
+
+[38]
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
+
+
+[39] [40
+
+]
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   ,
+l.642 ...hen the training reached the \nth{12,000}
+                                                   epoch, and onward from th...
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ,
+l.642 ...hen the training reached the \nth{12,000}
+                                                   epoch, and onward from th...
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   ,
+l.642 ...hen the training reached the \nth{12,000}
+                                                   epoch, and onward from th...
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ,
+l.642 ...hen the training reached the \nth{12,000}
+                                                   epoch, and onward from th...
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+<graphs/B/tycho_1_TRAIN_SELECT_ONE_ADAM_0004_sigmoid.png, id=968, 1511.6475pt x
+ 487.8225pt>
+File: graphs/B/tycho_1_TRAIN_SELECT_ONE_ADAM_0004_sigmoid.png Graphic file (typ
+e png)
+ <use graphs/B/tycho_1_TRAIN_SELECT_ONE_ADAM_0004_sigmoid.png>
+Package pdftex.def Info: graphs/B/tycho_1_TRAIN_SELECT_ONE_ADAM_0004_sigmoid.pn
+g used on input line 648.
+(pdftex.def)             Requested size: 341.43309pt x 110.1796pt.
+
+<images/tycho1_result.png, id=969, 978.65625pt x 119.44624pt>
+File: images/tycho1_result.png Graphic file (type png)
+
+<use images/tycho1_result.png>
+Package pdftex.def Info: images/tycho1_result.png used on input line 687.
+(pdftex.def)             Requested size: 341.43309pt x 41.67192pt.
+ [41 <./graphs/B/tycho_1_TRAIN_SELECT_ONE_ADAM_0004_sigmoid.png>] [42 <./images
+/tycho1_result.png>] [43
+
+]
+<images/tycho12_result.png, id=992, 961.5925pt x 100.375pt>
+File: images/tycho12_result.png Graphic file (type png)
+
+<use images/tycho12_result.png>
+Package pdftex.def Info: images/tycho12_result.png used on input line 735.
+(pdftex.def)             Requested size: 341.43309pt x 35.64026pt.
+ [44] [45 <./images/tycho12_result.png>]
+<images/Tycho2.png, id=1002, 1471.4975pt x 589.20125pt>
+File: images/Tycho2.png Graphic file (type png)
+
+<use images/Tycho2.png>
+Package pdftex.def Info: images/Tycho2.png used on input line 749.
+(pdftex.def)             Requested size: 341.43309pt x 136.70917pt.
+ [46
+
+ <./images/Tycho2.png>]
+<images/tycho2_results1.png, id=1012, 957.5775pt x 96.36pt>
+File: images/tycho2_results1.png Graphic file (type png)
+
+<use images/tycho2_results1.png>
+Package pdftex.def Info: images/tycho2_results1.png used on input line 772.
+(pdftex.def)             Requested size: 341.43309pt x 34.35727pt.
+
+<images/tycho2vs12.png, id=1013, 1512.65125pt x 481.8pt>
+File: images/tycho2vs12.png Graphic file (type png)
+
+<use images/tycho2vs12.png>
+Package pdftex.def Info: images/tycho2vs12.png used on input line 779.
+(pdftex.def)             Requested size: 341.43309pt x 108.74585pt.
+ [47 <./images/tycho2_results1.png> <./images/tycho2vs12.png>] <images/tycho2vs
+dropout.png, id=1020, 1512.65125pt x 483.8075pt>
+File: images/tycho2vsdropout.png Graphic file (type png)
+
+<use images/tycho2vsdropout.png>
+Package pdftex.def Info: images/tycho2vsdropout.png used on input line 796.
+(pdftex.def)             Requested size: 341.43309pt x 109.19896pt.
+ [48 <./images/tycho2vsdropout.png>] [49]
+<images/Tycho3.png, id=1036, 1471.4975pt x 589.20125pt>
+File: images/Tycho3.png Graphic file (type png)
+
+<use images/Tycho3.png>
+Package pdftex.def Info: images/Tycho3.png used on input line 844.
+(pdftex.def)             Requested size: 341.43309pt x 136.70917pt.
+ [50
+
+] [51 <./images/Tycho3.png>]
+<images/tycho3vsdropout.png, id=1050, 1517.67pt x 477.785pt>
+File: images/tycho3vsdropout.png Graphic file (type png)
+
+<use images/tycho3vsdropout.png>
+Package pdftex.def Info: images/tycho3vsdropout.png used on input line 884.
+(pdftex.def)             Requested size: 341.43309pt x 107.48239pt.
+ [52 <./images/tycho3vsdropout.png>] [53]
+<images/Tychoconv3.png, id=1063, 1187.43625pt x 405.515pt>
+File: images/Tychoconv3.png Graphic file (type png)
+
+<use images/Tychoconv3.png>
+Package pdftex.def Info: images/Tychoconv3.png used on input line 917.
+(pdftex.def)             Requested size: 341.43309pt x 116.60011pt.
+ [54
+
+]
+<images/conv5.png, id=1069, 1586.92876pt x 603.25375pt>
+File: images/conv5.png Graphic file (type png)
+ <use images/conv5.png>
+Package pdftex.def Info: images/conv5.png used on input line 930.
+(pdftex.def)             Requested size: 341.43309pt x 129.78908pt.
+
+! Undefined control sequence.
+l.935 ...yer contains a filter of size \(3\times\3
+                                                  \), and an output size of ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! Package caption Error: \caption outside float.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.951 \caption
+              {Experiment results after 2000 epochs.}
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-File: graphs/tycho_1_SGD_0.004_sigmoid.jpg Graphic file (type eps)
-<graphs/tycho_1_SGD_0.004_sigmoid.jpg> (./report.bbl [33
+
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
 
-Non-PDF special ignored!]
-bibitemlist
-) [34
+[55 <./images/Tychoconv3.png> <./images/conv5.png>]
+<images/convgraph.png, id=1078, 1513.655pt x 481.8pt>
+File: images/convgraph.png Graphic file (type png)
+
+<use images/convgraph.png>
+Package pdftex.def Info: images/convgraph.png used on input line 956.
+(pdftex.def)             Requested size: 341.43309pt x 108.67967pt.
+
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
+
+
+[56 <./images/convgraph.png>] [57
+
+] [58] [59] [60
 
 ]
+<graphs/A/tycho_1_SGD_04_sigmoid_train.png, id=1118, 1516.66624pt x 486.81876pt
+>
+File: graphs/A/tycho_1_SGD_04_sigmoid_train.png Graphic file (type png)
+ <use graphs/A/tycho_1_SGD_04_sigmoid_train.png>
+Package pdftex.def Info: graphs/A/tycho_1_SGD_04_sigmoid_train.png used on inpu
+t line 1012.
+(pdftex.def)             Requested size: 341.43309pt x 109.58891pt.
+
+<graphs/A/tycho_1_SGD_004_sigmoid.png, id=1119, 1515.6625pt x 475.7775pt>
+File: graphs/A/tycho_1_SGD_004_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_SGD_004_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_SGD_004_sigmoid.png used on input lin
+e 1018.
+(pdftex.def)             Requested size: 341.43309pt x 107.17598pt.
+
+<graphs/A/tycho_1_SGD_0004_sigmoid.png, id=1120, 1525.7pt x 493.845pt>
+File: graphs/A/tycho_1_SGD_0004_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_SGD_0004_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_SGD_0004_sigmoid.png used on input li
+ne 1024.
+(pdftex.def)             Requested size: 341.43309pt x 110.51501pt.
+ [61
+
+ <./graphs/A/tycho_1_SGD_04_sigmoid_train.png> <./graphs/A/tycho_1_SGD_004_sigm
+oid.png>]
+<graphs/A/tycho_1_SGD_0001_sigmoid.png, id=1128, 1515.6625pt x 483.8075pt>
+File: graphs/A/tycho_1_SGD_0001_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_SGD_0001_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_SGD_0001_sigmoid.png used on input li
+ne 1030.
+(pdftex.def)             Requested size: 341.43309pt x 108.98486pt.
+
+<graphs/A/tycho_1_NESTEROV_04_sigmoid.png, id=1129, 1507.6325pt x 483.8075pt>
+File: graphs/A/tycho_1_NESTEROV_04_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_NESTEROV_04_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_NESTEROV_04_sigmoid.png used on input
+ line 1036.
+(pdftex.def)             Requested size: 341.43309pt x 109.56068pt.
+
+<graphs/A/tycho_1_NESTEROV_004_sigmoid.png, id=1130, 1503.6175pt x 479.7925pt>
+File: graphs/A/tycho_1_NESTEROV_004_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_NESTEROV_004_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_NESTEROV_004_sigmoid.png used on inpu
+t line 1042.
+(pdftex.def)             Requested size: 341.43309pt x 108.9443pt.
+
+<graphs/A/tycho_1_NESTEROV_0004_sigmoid.png, id=1131, 1515.6625pt x 487.8225pt>
+File: graphs/A/tycho_1_NESTEROV_0004_sigmoid.png Graphic file (type png)
+<use graphs/A/tycho_1_NESTEROV_0004_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_NESTEROV_0004_sigmoid.png used on inp
+ut line 1048.
+(pdftex.def)             Requested size: 341.43309pt x 109.8893pt.
+ [62 <./graphs/A/tycho_1_SGD_0004_sigmoid.png> <./graphs/A/tycho_1_SGD_0001_sig
+moid.png> <./graphs/A/tycho_1_NESTEROV_04_sigmoid.png> <./graphs/A/tycho_1_NEST
+EROV_004_sigmoid.png>]
+<graphs/A/tycho_1_NESTEROV_0001_sigmoid.png, id=1140, 1531.7225pt x 493.845pt>
+File: graphs/A/tycho_1_NESTEROV_0001_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_NESTEROV_0001_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_NESTEROV_0001_sigmoid.png used on inp
+ut line 1054.
+(pdftex.def)             Requested size: 341.43309pt x 110.07796pt.
+
+<graphs/A/tycho_1_ADAM_04_sigmoid.png, id=1141, 1527.7075pt x 482.80376pt>
+File: graphs/A/tycho_1_ADAM_04_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_ADAM_04_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_ADAM_04_sigmoid.png used on input lin
+e 1060.
+(pdftex.def)             Requested size: 341.43309pt x 107.90419pt.
+
+<graphs/A/tycho_1_ADAM_004_sigmoid.png, id=1142, 1523.6925pt x 473.77pt>
+File: graphs/A/tycho_1_ADAM_004_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_ADAM_004_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_ADAM_004_sigmoid.png used on input li
+ne 1066.
+(pdftex.def)             Requested size: 341.43309pt x 106.1599pt.
+
+<graphs/A/tycho_1_ADAM_0004_sigmoid.png, id=1143, 1511.6475pt x 496.85625pt>
+File: graphs/A/tycho_1_ADAM_0004_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_ADAM_0004_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_ADAM_0004_sigmoid.png used on input l
+ine 1072.
+(pdftex.def)             Requested size: 341.43309pt x 112.21997pt.
+ [63 <./graphs/A/tycho_1_NESTEROV_0004_sigmoid.png> <./graphs/A/tycho_1_NESTERO
+V_0001_sigmoid.png> <./graphs/A/tycho_1_ADAM_04_sigmoid.png> <./graphs/A/tycho_
+1_ADAM_004_sigmoid.png>]
+<graphs/A/tycho_1_ADAM_0001_sigmoid.png, id=1152, 1513.655pt x 481.8pt>
+File: graphs/A/tycho_1_ADAM_0001_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_ADAM_0001_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_ADAM_0001_sigmoid.png used on input l
+ine 1078.
+(pdftex.def)             Requested size: 341.43309pt x 108.67967pt.
+
+<graphs/A/tycho_1_ADAM_4e-05_sigmoid.png, id=1153, 1521.685pt x 479.7925pt>
+File: graphs/A/tycho_1_ADAM_4e-05_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_ADAM_4e-05_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_ADAM_4e-05_sigmoid.png used on input 
+line 1084.
+(pdftex.def)             Requested size: 341.43309pt x 107.6558pt.
+
+<graphs/A/tycho_1_ADAM_4e-06_sigmoid.png, id=1154, 1528.71124pt x 483.8075pt>
+File: graphs/A/tycho_1_ADAM_4e-06_sigmoid.png Graphic file (type png)
+
+<use graphs/A/tycho_1_ADAM_4e-06_sigmoid.png>
+Package pdftex.def Info: graphs/A/tycho_1_ADAM_4e-06_sigmoid.png used on input 
+line 1090.
+(pdftex.def)             Requested size: 341.43309pt x 108.0547pt.
+ [64 <./graphs/A/tycho_1_ADAM_0004_sigmoid.png> <./graphs/A/tycho_1_ADAM_0001_s
+igmoid.png> <./graphs/A/tycho_1_ADAM_4e-05_sigmoid.png> <./graphs/A/tycho_1_ADA
+M_4e-06_sigmoid.png>]
+File: graphs/B/tycho_1_TRAIN_SELECT_ONE_ADAM_0004_sigmoid.png Graphic file (typ
+e png)
+
+<use graphs/B/tycho_1_TRAIN_SELECT_ONE_ADAM_0004_sigmoid.png>
+Package pdftex.def Info: graphs/B/tycho_1_TRAIN_SELECT_ONE_ADAM_0004_sigmoid.pn
+g used on input line 1101.
+(pdftex.def)             Requested size: 341.43309pt x 110.1796pt.
+ [65
+
+]
+<graphs/C/tycho_1_ADAM_0004_relu.png, id=1169, 1509.64pt x 488.82625pt>
+File: graphs/C/tycho_1_ADAM_0004_relu.png Graphic file (type png)
+
+<use graphs/C/tycho_1_ADAM_0004_relu.png>
+Package pdftex.def Info: graphs/C/tycho_1_ADAM_0004_relu.png used on input line
+ 1115.
+(pdftex.def)             Requested size: 341.43309pt x 110.55548pt.
+
+<graphs/C/tycho_12_TRAIN_SELECT_ONE_ADAM_0004_relu.png, id=1170, 1526.70375pt x
+ 485.815pt>
+File: graphs/C/tycho_12_TRAIN_SELECT_ONE_ADAM_0004_relu.png Graphic file (type 
+png)
+ <use graphs/C/tycho_12_TRAIN_SELECT_ONE_ADAM_0004_relu.png>
+Package pdftex.def Info: graphs/C/tycho_12_TRAIN_SELECT_ONE_ADAM_0004_relu.png 
+used on input line 1123.
+(pdftex.def)             Requested size: 341.43309pt x 108.6439pt.
+
+[66
+
+ <./graphs/C/tycho_1_ADAM_0004_relu.png> <./graphs/C/tycho_12_TRAIN_SELECT_ONE_
+ADAM_0004_relu.png>]
+<graphs/D/tycho_2_experiments_ADAM_00004_relu_relu.png, id=1178, 1499.6025pt x 
+476.78125pt>
+File: graphs/D/tycho_2_experiments_ADAM_00004_relu_relu.png Graphic file (type 
+png)
+ <use graphs/D/tycho_2_experiments_ADAM_00004_relu_relu.png>
+Package pdftex.def Info: graphs/D/tycho_2_experiments_ADAM_00004_relu_relu.png 
+used on input line 1136.
+(pdftex.def)             Requested size: 341.43309pt x 108.55156pt.
+
+<graphs/D/tycho_2_TRAIN_CONCAT_ADAM_0004_relu_relu_0.png, id=1179, 1525.7pt x 4
+87.8225pt>
+File: graphs/D/tycho_2_TRAIN_CONCAT_ADAM_0004_relu_relu_0.png Graphic file (typ
+e png)
+ <use graphs/D/tycho_2_TRAIN_CONCAT_ADAM_0004_relu_relu_0.png>
+Package pdftex.def Info: graphs/D/tycho_2_TRAIN_CONCAT_ADAM_0004_relu_relu_0.pn
+g used on input line 1145.
+(pdftex.def)             Requested size: 341.43309pt x 109.16728pt.
+
+<graphs/D/tycho_2_TRAIN_CONCAT_ADAM_0004_relu_relu_05.png, id=1180, 1517.67pt x
+ 474.77374pt>
+File: graphs/D/tycho_2_TRAIN_CONCAT_ADAM_0004_relu_relu_05.png Graphic file (ty
+pe png)
+ <use graphs/D/tycho_2_TRAIN_CONCAT_ADAM_0004_relu_relu_05.png>
+Package pdftex.def Info: graphs/D/tycho_2_TRAIN_CONCAT_ADAM_0004_relu_relu_05.p
+ng used on input line 1153.
+(pdftex.def)             Requested size: 341.43309pt x 106.805pt.
+
+[67
+
+ <./graphs/D/tycho_2_experiments_ADAM_00004_relu_relu.png> <./graphs/D/tycho_2_
+TRAIN_CONCAT_ADAM_0004_relu_relu_0.png>] [68 <./graphs/D/tycho_2_TRAIN_CONCAT_A
+DAM_0004_relu_relu_05.png>]
+<graphs/E/tycho_2_experiments_ADAM_0004_maxout_relu.png, id=1194, 1509.64pt x 4
+95.8525pt>
+File: graphs/E/tycho_2_experiments_ADAM_0004_maxout_relu.png Graphic file (type
+ png)
+ <use graphs/E/tycho_2_experiments_ADAM_0004_maxout_relu.png>
+Package pdftex.def Info: graphs/E/tycho_2_experiments_ADAM_0004_maxout_relu.png
+ used on input line 1166.
+(pdftex.def)             Requested size: 341.43309pt x 112.14458pt.
+
+<graphs/E/tycho_21_TRAIN_CONCAT_ADAM_0004_maxout_relu.png, id=1195, 1506.62875p
+t x 486.81876pt>
+File: graphs/E/tycho_21_TRAIN_CONCAT_ADAM_0004_maxout_relu.png Graphic file (ty
+pe png)
+
+<use graphs/E/tycho_21_TRAIN_CONCAT_ADAM_0004_maxout_relu.png>
+Package pdftex.def Info: graphs/E/tycho_21_TRAIN_CONCAT_ADAM_0004_maxout_relu.p
+ng used on input line 1174.
+(pdftex.def)             Requested size: 341.43309pt x 110.31688pt.
+
+<graphs/E/tycho_21_TRAIN_CONCAT_ADAM_4e-05_maxout_relu_05.png, id=1196, 1517.67
+pt x 478.78876pt>
+File: graphs/E/tycho_21_TRAIN_CONCAT_ADAM_4e-05_maxout_relu_05.png Graphic file
+ (type png)
+
+<use graphs/E/tycho_21_TRAIN_CONCAT_ADAM_4e-05_maxout_relu_05.png>
+Package pdftex.def Info: graphs/E/tycho_21_TRAIN_CONCAT_ADAM_4e-05_maxout_relu_
+05.png used on input line 1182.
+(pdftex.def)             Requested size: 341.43309pt x 107.7082pt.
+ [69
+
+ <./graphs/E/tycho_2_experiments_ADAM_0004_maxout_relu.png> <./graphs/E/tycho_2
+1_TRAIN_CONCAT_ADAM_0004_maxout_relu.png>] [70 <./graphs/E/tycho_21_TRAIN_CONCA
+T_ADAM_4e-05_maxout_relu_05.png>]
+<graphs/F/conv3.png, id=1209, 1511.6475pt x 478.78876pt>
+File: graphs/F/conv3.png Graphic file (type png)
+
+<use graphs/F/conv3.png>
+Package pdftex.def Info: graphs/F/conv3.png used on input line 1192.
+(pdftex.def)             Requested size: 341.43309pt x 108.13924pt.
+
+<graphs/F/conv4.png, id=1210, 1511.6475pt x 480.79625pt>
+File: graphs/F/conv4.png Graphic file (type png)
+
+<use graphs/F/conv4.png>
+Package pdftex.def Info: graphs/F/conv4.png used on input line 1198.
+(pdftex.def)             Requested size: 341.43309pt x 108.59265pt.
+ <graphs/F/conv5.png, id=1211, 1516.66624pt x 481.8pt>
+File: graphs/F/conv5.png Graphic file (type png)
+
+<use graphs/F/conv5.png>
+Package pdftex.def Info: graphs/F/conv5.png used on input line 1205.
+(pdftex.def)             Requested size: 341.43309pt x 108.45912pt.
+ [71
+
+ <./graphs/F/conv3.png> <./graphs/F/conv4.png>]
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
+
+
+[72 <./graphs/F/conv5.png>]
+<graphs/G/email.png, id=1224, 627.34375pt x 551.05875pt>
+File: graphs/G/email.png Graphic file (type png)
+
+<use graphs/G/email.png>
+Package pdftex.def Info: graphs/G/email.png used on input line 1217.
+(pdftex.def)             Requested size: 341.43309pt x 299.92165pt.
+ (./report.bbl [73
+
+ <./graphs/G/email.png>]
+bibitemlist
+
+Underfull \hbox (badness 1226) in paragraph at lines 27--31
+[]\T1/ptm/m/n/12 (+20) Ian Good-fel-low, David Warde-Farley, Mehdi Mirza, Aaron
+
+ []
+
+[74
+
+])
+
+Class memoir Warning: The material used in the headers is too large
+(28.99998pt) for the given head height (14.5pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 1228.
+
+[75]
 \tf@toc=\write5
 \openout5 = `report.toc'.
 
 \tf@lof=\write6
 \openout6 = `report.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 626.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 626.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1228.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1228.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 626.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 626.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1228.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1228.
+
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 0B7D76D9042F1AF4FDB98CB908166139;3224.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 626.
+(rerunfilecheck)             Checksum: E1B148DBECDEC77C4470FB5AEEA0504E;5906.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1228.
  ) 
 Here is how much of TeX's memory you used:
- 13031 strings out of 493029
- 192630 string characters out of 6136235
- 348333 words of memory out of 5000000
- 16119 multiletter control sequences out of 15000+600000
- 74842 words of font info for 174 fonts, out of 8000000 for 9000
+ 15376 strings out of 493029
+ 227904 string characters out of 6136235
+ 529255 words of memory out of 5000000
+ 18161 multiletter control sequences out of 15000+600000
+ 90589 words of font info for 196 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,12n,49p,1520b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,12n,49p,1764b,2008s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
@@ -1429,13 +1950,15 @@ type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (34 pages, 1144776 bytes).
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on report.pdf (75 pages, 4124006 bytes).
 PDF statistics:
- 586 PDF objects out of 1000 (max. 8388607)
- 511 compressed objects within 6 object streams
- 110 named destinations out of 1000 (max. 500000)
- 34776 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1355 PDF objects out of 1440 (max. 8388607)
+ 1149 compressed objects within 12 object streams
+ 316 named destinations out of 1000 (max. 500000)
+ 45533 words of extra memory for PDF output out of 51595 (max. 10000000)
 

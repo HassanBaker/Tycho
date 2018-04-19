@@ -5,50 +5,59 @@ The style file: unsrt.bst
 Database file #1: references.bib
 Warning--entry type for "Sanders-GZ" isn't style-file defined
 --line 3 of file references.bib
-Warning--empty journal in rumelhart
+Warning--entry type for "Sanders-P" isn't style-file defined
+--line 11 of file references.bib
+Warning--entry type for "dgb" isn't style-file defined
+--line 29 of file references.bib
+You're missing a field name---line 151 of file references.bib
+ : 
+ : %  author = "Jarrett, K. and Kavukcuoglu, K. and Ranzato, M. A. and LeCun, Y.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty journal in Nguyen
 Warning--empty journal in Fang
 Warning--empty journal in maxout
+Warning--empty journal in rumelhart
 Warning--empty journal in ReLu
-You've used 8 entries,
+You've used 15 entries,
             1791 wiz_defined-function locations,
-            491 strings with 4856 characters,
-and the built_in function-call counts, 1662 in all, are:
-= -- 112
-> -- 122
-< -- 0
-+ -- 44
-- -- 36
-* -- 118
-:= -- 299
-add.period$ -- 23
-call.type$ -- 8
-change.case$ -- 8
+            534 strings with 5954 characters,
+and the built_in function-call counts, 3217 in all, are:
+= -- 248
+> -- 197
+< -- 1
++ -- 72
+- -- 57
+* -- 208
+:= -- 545
+add.period$ -- 43
+call.type$ -- 15
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 64
-empty$ -- 144
-format.name$ -- 36
-if$ -- 344
+cite$ -- 20
+duplicate$ -- 131
+empty$ -- 297
+format.name$ -- 57
+if$ -- 699
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 7
-newline$ -- 42
-num.names$ -- 8
-pop$ -- 32
+int.to.str$ -- 15
+missing$ -- 12
+newline$ -- 75
+num.names$ -- 15
+pop$ -- 53
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 27
+skip$ -- 68
 stack$ -- 0
-substring$ -- 60
-swap$ -- 3
-text.length$ -- 0
+substring$ -- 154
+swap$ -- 21
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 5
-while$ -- 11
-width$ -- 9
-write$ -- 78
-(There were 6 warnings)
+while$ -- 23
+width$ -- 17
+write$ -- 152
+(There was 1 error message)

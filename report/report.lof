@@ -1,22 +1,72 @@
 \addvspace {10pt}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Decision tree of galaxy labels in the GZ2 data set taken from Willett et al\nobreakspace {}\cite {Willett}.\relax }}{7}{figure.caption.2}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces A neuron in a neural network which multiplies an input with a weight, adds a bias, and carrys out a non-linear activation function.\relax }}{8}{figure.caption.3}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces A fully connected network whereby all neurons in a \(layer_i\) are connected to all neurons in \(layer_i_+_1\).\relax }}{8}{figure.caption.4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Decision tree of galaxy labels in the GZ2 data set taken from Willett et al\nobreakspace {}\cite {Willett}.\relax }}{13}{figure.caption.5}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Screenshot of TensorBoard\relax }}{12}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces An image of a galaxy from the GZ2 data set.\relax }}{13}{figure.caption.6}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Outlier images found in GZ2\relax }}{15}{figure.caption.7}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Visualization of how 4 features are extracted from one image. Figure taken from Sander Dieleman's blog\nobreakspace {}\cite {Sanders-GZ}\relax }}{16}{figure.caption.8}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Visualization of how the four overlapping parts are extracted from each images created in \ref {fig:sanders-aug-1}. Figure taken from Sander Dieleman's blog\nobreakspace {}\cite {Sanders-GZ}\relax }}{16}{figure.caption.9}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Screen-shot of TensorBoard scalars view\relax }}{18}{figure.caption.6}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram of the Tycho1 network\relax }}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces In neural networks, a neuron is an abstract object which multiplies an input with a weight, adds a bias, and carrys out a non-linear activation function.\relax }}{25}{figure.caption.7}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A fully connected network whereby all neurons in a \(layer_i\) are connected to all neurons in \(layer_i_+_1\). Image taken from http://neuralnetworksanddeeplearning.com/chap1.html\relax }}{25}{figure.caption.8}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The resultant RMSE's for each learning rate on each algorithm\relax }}{22}{figure.caption.11}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces An image of a galaxy from the GZ2 data set.\relax }}{28}{figure.caption.9}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Outlier images found in GZ2\relax }}{30}{figure.caption.10}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces A histogram of the crop amounts of each image in 90\% of the training set. It's very clear that outliers do effect the results, as there plenty of images with very high crop sizes, which is a result noise from extra stellar objects.\relax }}{31}{figure.caption.11}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualization of how 4 features are extracted from one image. Figure taken from Sander Dieleman's blog\nobreakspace {}\cite {Sanders-GZ}\relax }}{32}{figure.caption.12}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Visualization of how the four overlapping parts are extracted from each images created in \ref {fig:sanders-aug-1}. Figure taken from Sander Dieleman's blog\nobreakspace {}\cite {Sanders-GZ}\relax }}{32}{figure.caption.13}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram of the Tycho1 network\relax }}{33}{figure.caption.14}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Graph of ReLu activation. Taken from https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6\relax }}{34}{figure.caption.15}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Graph of sigmoid activation. Taken from https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6\relax }}{35}{figure.caption.16}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces The resultant RMSE's for each learning rate on each algorithm\relax }}{39}{figure.caption.17}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces TensorBoard graph of Tycho1 network training (with a smoothing of 0.85 applied)\relax }}{41}{figure.caption.18}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Kaggle submission result of Tycho1 network after 14700 training epochs with a normalized solution)\relax }}{42}{figure.caption.20}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Kaggle submission result of Tycho1.2 network after 24701 training epochs.)\relax }}{45}{figure.caption.21}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Diagram of the Tycho2 network\relax }}{46}{figure.caption.22}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces The test error of the Tycho2 Network after 5000 training epochs. Private score on the left and public score on the right.\relax }}{47}{figure.caption.23}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Graph of Tycho2 training error and Tycho1.2 training error\relax }}{47}{figure.caption.24}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Graph of training errors of Tycho2 using dropout and Tycho2 without dropout.\relax }}{48}{figure.caption.25}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Diagram of the Tycho3 network\relax }}{51}{figure.caption.26}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Graph of Tycho3 with dropout training error and Tycho3 without dropout training error. \textbf {N.B.} The graph for the Tycho3 error without the use of dropout is split into two colours, grey and orange. This is because a code change was made that resulted in the graphs having different names, hence TensorBoard reads them as two separate graphs.\relax }}{52}{figure.caption.27}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Diagram of a variation of the Tycho1.2 network with 3 convolutional layers instead of 4\relax }}{55}{figure.caption.28}
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Diagram of a variation of the Tycho1.2 network with 5 convolutional layers instead of 4\relax }}{55}{figure.caption.29}
+\contentsline {figure}{\numberline {11.3}{\ignorespaces Graph of of training and validation errors of all three networks. \textbf {N.B.} There is no legend in this graph as there is too many lines, and they are all behaving identically.\relax }}{56}{figure.caption.30}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Graph of the Tycho1 network using SGD with a learning rate of 0.04\relax }}{61}{figure.caption.31}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Graph of the Tycho1 network using SGD with a learning rate of 0.004\relax }}{61}{figure.caption.32}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Graph of the Tycho1 network using SGD with a learning rate of 0.0004\relax }}{62}{figure.caption.33}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Graph of the Tycho1 network using SGD with a learning rate of 0.0001\relax }}{62}{figure.caption.34}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Graph of the Tycho1 network using SGD withe nesterov momentum with a learning rate of 0.04\relax }}{62}{figure.caption.35}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Graph of the Tycho1 network using SGD withe nesterov momentum with a learning rate of 0.004\relax }}{62}{figure.caption.36}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Graph of the Tycho1 network using SGD withe nesterov momentum with a learning rate of 0.0004\relax }}{63}{figure.caption.37}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Graph of the Tycho1 network using SGD withe nesterov momentum with a learning rate of 0.0001\relax }}{63}{figure.caption.38}
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Graph of the Tycho1 network using the Adam optimiser with a learning rate of 0.04\relax }}{63}{figure.caption.39}
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Graph of the Tycho1 network using the Adam optimiser with a learning rate of 0.004\relax }}{63}{figure.caption.40}
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Graph of the Tycho1 network using the Adam optimiser with a learning rate of 0.0004\relax }}{64}{figure.caption.41}
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Graph of the Tycho1 network using the Adam optimiser with a learning rate of 0.0001\relax }}{64}{figure.caption.42}
+\contentsline {figure}{\numberline {A.13}{\ignorespaces Graph of the Tycho1 network using the Adam optimiser with a learning rate of 0.00004\relax }}{64}{figure.caption.43}
+\contentsline {figure}{\numberline {A.14}{\ignorespaces Graph of the Tycho1 network using the Adam optimiser with a learning rate of 0.000004\relax }}{64}{figure.caption.44}
 \addvspace {10pt}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Graph of the training error for the duration of the training period\relax }}{65}{figure.caption.45}
 \addvspace {10pt}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Graph of the validation of the Tycho1.2 network.\relax }}{66}{figure.caption.46}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Graph of the training error for the duration of the training period\relax }}{66}{figure.caption.47}
 \addvspace {10pt}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Graph of the validation of the Tycho2 network.\relax }}{67}{figure.caption.48}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Graph of the training error for the duration of the training period\relax }}{67}{figure.caption.49}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Graph of the training error for the duration of the training period\relax }}{68}{figure.caption.50}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {.1}{\ignorespaces test\relax }}{33}{figure.caption.12}
+\contentsline {figure}{\numberline {E.1}{\ignorespaces Graph of the validation of the Tycho3 network.\relax }}{69}{figure.caption.51}
+\contentsline {figure}{\numberline {E.2}{\ignorespaces Graph of the training error for the duration of the training period\relax }}{69}{figure.caption.52}
+\contentsline {figure}{\numberline {E.3}{\ignorespaces Graph of the training error for the duration of the training period\relax }}{70}{figure.caption.53}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {F.1}{\ignorespaces Graph of experiment results of Tycho1.2 with 3 convolutional layers.\relax }}{71}{figure.caption.54}
+\contentsline {figure}{\numberline {F.2}{\ignorespaces Graph of experiment results of Tycho1.2 with 4 convolutional layers.\relax }}{71}{figure.caption.55}
+\contentsline {figure}{\numberline {F.3}{\ignorespaces Graph of experiment results of Tycho1.2 with 5 convolutional layers.\relax }}{72}{figure.caption.56}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {G.1}{\ignorespaces Email exchange with Sander Dieleman in regards to the maxout layer configuration in his solution\relax }}{73}{figure.caption.57}

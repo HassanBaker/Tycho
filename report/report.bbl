@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Willett}
 K.~W. Willett, C.~J. Lintott, S.~P. Bamford, K.~L. Masters, B.~D. Simmons,
@@ -12,17 +12,6 @@ K.~W. Willett, C.~J. Lintott, S.~P. Bamford, K.~L. Masters, B.~D. Simmons,
 \bibitem{Sanders-GZ}
 S.~Dieleman.
 \newblock My solution for the galaxy zoo challenge, 2014.
-
-\bibitem{rumelhart}
-David E.~Rumelhart, Geoffrey E.~Hinton, and Ronald J.~Williams.
-\newblock Learning representations by back propagating errors.
-\newblock 323:533--536, 10 1986.
-
-\bibitem{Bhandare}
-Ashwin Bhandare, Maithili Bhide, Pranav Gokhale, and Rohan Chandavarkar.
-\newblock Applications of convolutional neural networks.
-\newblock {\em (IJCSIT) International Journal of Computer Science and
-  Information Technologies}, 7(5):2206--2215, 2016.
 
 \bibitem{Nguyen}
 Tu~Dinh Nguyen and Truyen Tran.
@@ -40,9 +29,58 @@ Ian Goodfellow, David Warde-Farley, Mehdi Mirza, Aaron Courville, and Yoshua
 \newblock Maxout networks.
 \newblock 2013.
 
+\bibitem{rumelhart}
+David E.~Rumelhart, Geoffrey E.~Hinton, and Ronald J.~Williams.
+\newblock Learning representations by back propagating errors.
+\newblock 323:533--536, 10 1986.
+
+\bibitem{dgb}
+D.~G. Bridge.
+\newblock Cs4619: Artificial intelligence ii - overfitting and underfitting,
+  2018.
+
+\bibitem{dropout}
+N.~Srivastava, G~Hinton, A.~Krizhevsky, I.~Sutskever, and R.~R. Salakhutdinov.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock {\em Journal of Machine Learning Research}, 15:1929--1958, 2014.
+
+\bibitem{Bhandare}
+Ashwin Bhandare, Maithili Bhide, Pranav Gokhale, and Rohan Chandavarkar.
+\newblock Applications of convolutional neural networks.
+\newblock {\em (IJCSIT) International Journal of Computer Science and
+  Information Technologies}, 7(5):2206--2215, 2016.
+
 \bibitem{ReLu}
 V.~Nair and G.~E. Hinton.
 \newblock Rectified linear units improve restricted boltzmann machines.
 \newblock 2010.
+
+\bibitem{Kingma}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock Adam: {A} method for stochastic optimization.
+\newblock {\em CoRR}, abs/1412.6980, 2014.
+
+\bibitem{Sanders-P}
+S.~Dieleman, A.~Oord, I.~Korshunova, J.~Burms, J.~Degrave, L.~Pigou, and
+  P.~Buteneers.
+\newblock Classifying plankton with deep neural networks, 2015.
+
+\bibitem{Lintott}
+Chris~J. Lintott et~al.
+\newblock {Galaxy Zoo : Morphologies derived from visual inspection of galaxies
+  from the Sloan Digital Sky Survey}.
+\newblock {\em Mon. Not. Roy. Astron. Soc.}, 389:1179--1189, 2008.
+
+\bibitem{cap1}
+Geoffrey~F. Hinton.
+\newblock Shape representation in parallel systems.
+\newblock In {\em Proceedings of the 7th International Joint Conference on
+  Artificial Intelligence - Volume 2}, IJCAI'81, pages 1088--1096, San
+  Francisco, CA, USA, 1981. Morgan Kaufmann Publishers Inc.
+
+\bibitem{cap2}
+Sara Sabour, Nicholas Frosst, and Geoffrey~E. Hinton.
+\newblock Dynamic routing between capsules.
+\newblock {\em CoRR}, abs/1710.09829, 2017.
 
 \end{thebibliography}
