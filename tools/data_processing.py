@@ -7,7 +7,7 @@ from skimage import io
 from skimage.transform import rescale
 from skimage.transform import rotate
 
-from tools.config import root_dir, labels_df
+from tools.config import data_dir, labels_df
 
 """
 Contains data processing classes:
@@ -136,7 +136,7 @@ class image_data:
     """
 
     def __init__(self, dir_name, type="TRAIN", augment="REDUCE"):
-        self.directory = root_dir + dir_name
+        self.directory = data_dir + dir_name
         self.file_names = [f for f in listdir(self.directory) if isfile(join(self.directory, f))]
         self.TYPE = type
         if self.TYPE != "TEST":

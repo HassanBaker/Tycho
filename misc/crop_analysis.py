@@ -3,9 +3,9 @@ from os.path import isfile, join
 from skimage import io
 from tqdm import tqdm
 import numpy as np
-from tools.config import root_dir, TRAIN_DIR
+from tools.config import data_dir, TRAIN_DIR
 
-DIR = root_dir + TRAIN_DIR
+DIR = data_dir + TRAIN_DIR
 files = [f for f in listdir(DIR) if isfile(join(DIR, f))]
 
 

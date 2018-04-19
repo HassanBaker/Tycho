@@ -5,16 +5,16 @@ from os.path import join
 This file contains useful variables and configurations that are extensively used throughout studies and training
 """
 
-root_dir = "/home/hassan/fyp/data/"
+data_dir = "directory where all the data is stored"
 TRAIN_DIR = "training"
 VALIDATION_DIR = "validation"
 FULL_TRAIN_DIR = "images_training_rev1"
 TEST_DIR = "images_test_rev1"
-labels_df = pd.read_csv(join(root_dir, "training_solutions_rev1.csv"))
+labels_df = pd.read_csv(join(data_dir, "training_solutions_rev1.csv"))
 
-solutions_dir = "/home/hassan/fyp/tycho/gen_files/solutions/"
-log_dir = "/home/hassan/fyp/tycho/gen_files/logs/"
-save_dir = "/home/hassan/fyp/tycho/gen_files/session_store/"
+solutions_dir = "The directory where you want your solution files stored"
+log_dir = "The directory where you want your TenorBoard log files stored"
+save_dir = "The directory where you want your TensorFlow sessions to be saved"
 
 labels = ["GalaxyID",
           "Class1.1",
