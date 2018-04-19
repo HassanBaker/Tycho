@@ -3,6 +3,11 @@ from tools.data_processing import image_data
 from tools.network_blocks import *
 from tools.model_methods import train
 
+"""
+As Tycho 2 and Tycho 3 share very similar code, the same code is used here.
+Hence Tycho 3 is named Tycho2.1, and will appear in the logs, graphs, and session files as Tycho2.1
+"""
+
 IMAGE_SIZE = 45
 CHANNELS = 3
 NUM_LABELS = 37
@@ -10,8 +15,18 @@ BATCH_SIZE = 256
 NUM_AUGMENTS = 16
 TEST_EPOCHS = 313
 
+"""Tycho 2 configuration"""
+NAME = "tycho_2_TRAIN"
+ACTIVATION_FUNCTION_DENSE = "relu"
+ACTIVATION_FUNCTION_FINAL = "relu"
+
+"""Tycho 3 configuration"""
+"""
+NAME = "tycho_2.1_TRAIN"
 ACTIVATION_FUNCTION_DENSE = "maxout"
 ACTIVATION_FUNCTION_FINAL = "relu"
+"""
+
 LEARNING_OPTIMIZER = "ADAM"
 LEARNING_RATE = 0.0004
 DROPOUT = 0.5
@@ -20,7 +35,6 @@ TRAINING_DURATION = 10000
 RECORD_INTERVAL = 100
 TEST_INTERVAL = 5000
 SAVE_INTERVAL = 100
-NAME = "tycho_2_TRAIN"
 AUGMENT = "CONCAT"
 
 NAME = NAME + "_" + \

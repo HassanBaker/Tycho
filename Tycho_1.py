@@ -25,7 +25,7 @@ RECORD_INTERVAL = 100
 TEST_INTERVAL = 5000
 SAVE_INTERVAL = 100
 NAME = "tycho_1_TRAIN_"  # "tycho_1.2_TRAIN_" for Tycho 1.2
-AUGMENT = "SELECT_ONE"  # Selects a random image from 16 augmentations, reduces overfitting
+AUGMENT = "SELECT_ONE"  # Selects a random image from 16 augmentations, reduces over-fitting
 
 NAME = NAME + "_" + \
        AUGMENT + "_" + \
